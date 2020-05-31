@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react"
+import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faHome,
@@ -96,9 +97,16 @@ export default function Sidebar() {
               key={menu.name}
               className="cursor-pointer flex justify-center p-6  hover:text-dark-blue"
             >
-              <a href={menu.url}>
+              <Link
+                to={menu.url}
+                activeClassName="text-dark-blue"
+                state={{ activePage: menu.name }}
+              >
                 <FontAwesomeIcon icon={menu.icon.icon} size={menu.icon.size} />
-              </a>
+              </Link>
+              {/* <a href={menu.url}>
+                <FontAwesomeIcon icon={menu.icon.icon} size={menu.icon.size} />
+              </a> */}
               <p className={`${isFullSideBar ? "show-name" : "hide-name"}`}>
                 {menu.name}
               </p>

@@ -9,7 +9,9 @@ module.exports = {
   plugins: [`gatsby-plugin-postcss`, `gatsby-plugin-sass`],
 
   siteMetadata: {
+    title: "IM",
     author: "Igor Marchenko",
     email: "marauman@gmail.com",
+    siteUrl: "https://igormachenko.com",
   },
 }
