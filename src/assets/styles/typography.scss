@@ -1,0 +1,53 @@
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto|Spartan&display=swap);
+
+// Styles
+html,
+body,
+html * {
+  font-family: "Spartan", serif;
+  --light-grey: #a7c0cd;
+  --pink: #f76c6c;
+  --red: #b23850;
+  --dark-blue: #374785;
+}
+
+.bg-main {
+  background-color: var(--light-grey);
+}
+
+.bg-sidebar {
+  background-color: var(--pink);
+}
+
+.header-color {
+  color: var(--red);
+}
+
+.hover-color {
+  background-color: var(--dark-blue);
+}
+
+h1 {
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+
+h3 {
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+
+.text-pink {
+  color: var(--pink);
+}
+
+.text-dark-blue {
+  color: var(--dark-blue);
+}
+
+.experience-container {
+  width: 70rem;
+  max-width: 70rem;
+  display: inline-block;
+}

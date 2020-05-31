@@ -1,0 +1,17 @@
+.side-menu {
+  width: 6rem;
+  transition: width 300ms linear;
+}
+
+.side-menu-open {
+  width: 20rem;
+  transition: width 300ms linear;
+}
+
+.hide-name {
+  position: absolute;
+  left: -100px;
+  opacity: 0;
+  /* transition: [property] [duration] [timing-function] [delay]; */
+  transition: left 300ms linear, opacity 100ms linear;
+}
