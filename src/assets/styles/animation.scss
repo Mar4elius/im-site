@@ -1,0 +1,170 @@
+// https://medium.com/cloud-native-the-gathering/how-to-use-css-to-fade-in-and-fade-out-html-text-and-pictures-f45c11364f08
+.fade-in {
+  animation: fadeIn linear 3s;
+  -webkit-animation: fadeIn linear 3s;
+  -moz-animation: fadeIn linear 3s;
+  -o-animation: fadeIn linear 3s;
+  -ms-animation: fadeIn linear 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut ease 300ms;
+  -webkit-animation: fadeOut ease 300ms;
+  -moz-animation: fadeOut ease 300ms;
+  -o-animation: fadeOut ease 300ms;
+  -ms-animation: fadeOut ease 300ms;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.show-name {
+  animation: showname linear 300ms;
+  position: absolute;
+  left: 100px;
+  -webkit-animation: showname linear 300ms;
+  -moz-animation: showname linear 300ms;
+  -o-animation: showname linear 300ms;
+  -ms-animation: showname linear 300ms;
+}
+
+@keyframes showname {
+  from {
+    opacity: 0;
+    left: 1.2rem;
+  }
+  to {
+    opacity: 1;
+    left: 6rem;
+  }
+}
+
+@-moz-keyframes showname {
+  from {
+    opacity: 0;
+    left: 1.2rem;
+  }
+  to {
+    opacity: 1;
+    left: 6rem;
+  }
+}
+
+@-webkit-keyframes showname {
+  from {
+    opacity: 0;
+    left: 1.2rem;
+  }
+  to {
+    opacity: 1;
+    left: 6rem;
+  }
+}
+
+@-o-keyframes showname {
+  from {
+    opacity: 0;
+    left: 1.2rem;
+  }
+  to {
+    opacity: 1;
+    left: 6rem;
+  }
+}
+
+@-ms-keyframes showname {
+  0% {
+    opacity: 0;
+    left: 1.2rem;
+  }
+  100% {
+    opacity: 1;
+    left: 6rem;
+  }
+}
