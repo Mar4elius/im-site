@@ -6,5 +6,10 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [`gatsby-plugin-postcss`],
+  plugins: [`gatsby-plugin-postcss`, `gatsby-plugin-sass`],
+
+  siteMetadata: {
+    author: "Igor Marchenko",
+    email: "marauman@gmail.com",
+  },
 }
