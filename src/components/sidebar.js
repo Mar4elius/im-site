@@ -40,22 +40,22 @@ export default function Sidebar() {
         size: "lg",
       },
     },
-    {
-      name: "Git Hub",
-      url: "https://github.com/Mar4elius",
-      icon: {
-        icon: faGithub,
-        size: "lg",
-      },
-    },
-    {
-      name: "Linkedin",
-      url: "https://www.linkedin.com/in/igor-marchenko-126b00132/",
-      icon: {
-        icon: faLinkedin,
-        size: "lg",
-      },
-    },
+    // {
+    //   name: "Git Hub",
+    //   url: "https://github.com/Mar4elius",
+    //   icon: {
+    //     icon: faGithub,
+    //     size: "lg",
+    //   },
+    // },
+    // {
+    //   name: "Linkedin",
+    //   url: "https://www.linkedin.com/in/igor-marchenko-126b00132/",
+    //   icon: {
+    //     icon: faLinkedin,
+    //     size: "lg",
+    //   },
+    // },
   ]
 
   function handleArrowClick() {

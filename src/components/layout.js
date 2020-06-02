@@ -2,7 +2,7 @@ import React from "react"
 import Sidebar from "../components/sidebar"
 import Header from "../components/header"
 
-export default function Layout({ page }) {
+export default function Layout({ page, children }) {
   // Header quotes
   const quotes = {
     home: "The path will be overcome by the person walking it.",
@@ -21,6 +21,7 @@ export default function Layout({ page }) {
       <Sidebar />
       <div className="flex flex-wrap flex-col w-full">
         <Header quote={quotes[activeQuote]} />
+        {children}
       </div>
     </div>
   )
