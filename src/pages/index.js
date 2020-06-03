@@ -1,29 +1,27 @@
-import React, { useState, useEffect, useMemo } from "react"
+import React, { useState, useRef } from "react"
 import Layout from "../components/layout"
 import sub from "date-fns/sub"
+import useInterval from "../components/custom-hooks/useInterval"
 
 export default function Home({ location }) {
   const page = location.state.activePage
-  const startDate = useMemo(() => breakDate(new Date(2017, 10, 1)))
-  const [difDate, setDifDate] = useState(new Date())
+  const startDate = useRef(breakDate(new Date(2017, 10, 1))).current
+  const [difDate, setDifDate] = useState(breakDate(new Date()))
 
-  useEffect(() => {
-    setInterval(() => {
-      console.log("ehllo")
-      let difference = breakDate(
-        sub(new Date(), {
-          years: startDate.year,
-          months: startDate.month,
-          weeks: 0,
-          days: startDate.day,
-          hours: startDate.hours,
-          minutes: startDate.minutes,
-          seconds: startDate.seconds,
-        })
-      )
-      setDifDate(difference)
-    }, 1000)
-  })
+  useInterval(() => {
+    let difference = breakDate(
+      sub(new Date(), {
+        years: startDate.year,
+        months: startDate.month,
+        weeks: 0,
+        days: startDate.day,
+        hours: startDate.hours,
+        minutes: startDate.minutes,
+        seconds: startDate.seconds,
+      })
+    )
+    setDifDate(difference)
+  }, 1000)
 
   function breakDate(date) {
     return {
