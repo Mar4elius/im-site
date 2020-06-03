@@ -1,4 +1,6 @@
+// React
 import React, { useState, useRef } from "react"
+// Support
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -12,16 +14,16 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 export default function Sidebar() {
   const [isFullSideBar, setFullSideBar] = useState(false)
-
   let isClicked = useRef(false)
+  const iconSize = "lg"
 
-  const sideMenuOptions = [
+  const sideMenuOptionsInternal = [
     {
       name: "Home",
       url: "/", //TODO:Add URL
       icon: {
         icon: faHome,
-        size: "lg",
+        size: iconSize,
       },
     },
     {
@@ -29,7 +31,7 @@ export default function Sidebar() {
       url: "/my-code",
       icon: {
         icon: faLaptopCode,
-        size: "lg",
+        size: iconSize,
       },
     },
     {
@@ -37,25 +39,27 @@ export default function Sidebar() {
       url: "/about-me",
       icon: {
         icon: faAddressCard,
-        size: "lg",
+        size: iconSize,
       },
     },
-    // {
-    //   name: "Git Hub",
-    //   url: "https://github.com/Mar4elius",
-    //   icon: {
-    //     icon: faGithub,
-    //     size: "lg",
-    //   },
-    // },
-    // {
-    //   name: "Linkedin",
-    //   url: "https://www.linkedin.com/in/igor-marchenko-126b00132/",
-    //   icon: {
-    //     icon: faLinkedin,
-    //     size: "lg",
-    //   },
-    // },
+  ]
+  const sideMenuOptionsExternal = [
+    {
+      name: "Git Hub",
+      url: "https://github.com/Mar4elius",
+      icon: {
+        icon: faGithub,
+        size: iconSize,
+      },
+    },
+    {
+      name: "Linkedin",
+      url: "https://www.linkedin.com/in/igor-marchenko-126b00132/",
+      icon: {
+        icon: faLinkedin,
+        size: iconSize,
+      },
+    },
   ]
 
   function handleArrowClick() {
@@ -91,7 +95,8 @@ export default function Sidebar() {
             size="2x"
           />
         </li>
-        {sideMenuOptions.map(menu => {
+        {/* Internal Links */}
+        {sideMenuOptionsInternal.map(menu => {
           return (
             <li
               key={menu.name}
@@ -104,9 +109,22 @@ export default function Sidebar() {
               >
                 <FontAwesomeIcon icon={menu.icon.icon} size={menu.icon.size} />
               </Link>
-              {/* <a href={menu.url}>
+              <p className={`${isFullSideBar ? "show-name" : "hide-name"}`}>
+                {menu.name}
+              </p>
+            </li>
+          )
+        })}
+        {/* External Links */}
+        {sideMenuOptionsExternal.map(menu => {
+          return (
+            <li
+              key={menu.name}
+              className="cursor-pointer flex justify-center p-6  hover:text-dark-blue"
+            >
+              <a href={menu.url} target="_blank">
                 <FontAwesomeIcon icon={menu.icon.icon} size={menu.icon.size} />
-              </a> */}
+              </a>
               <p className={`${isFullSideBar ? "show-name" : "hide-name"}`}>
                 {menu.name}
               </p>

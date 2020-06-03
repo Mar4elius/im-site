@@ -14,7 +14,10 @@ export default function Technologies(props) {
         <ul>
           {props.children.map(skill => {
             return (
-              <li className="grid grid-cols-2 my-5 flex items-center">
+              <li
+                key={skill.name}
+                className="grid grid-cols-2 my-5 flex items-center"
+              >
                 <FontAwesomeIcon
                   icon={skill.icon.icon}
                   size={skill.icon.size}
