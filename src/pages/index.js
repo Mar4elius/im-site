@@ -1,12 +1,92 @@
+// React
 import React, { useState, useRef } from "react"
-import Layout from "../components/layout"
-import sub from "date-fns/sub"
 import useInterval from "../components/custom-hooks/useInterval"
+// Components
+import Layout from "../components/layout"
+import Technologies from "../components/technologies"
+// Support
+import sub from "date-fns/sub"
+import { faDatabase, faCodeBranch } from "@fortawesome/free-solid-svg-icons"
+import {
+  faPhp,
+  faJs,
+  faLaravel,
+  faVuejs,
+  faSass,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons"
 
 export default function Home({ location }) {
   const page = location.state.activePage
+  // Experience data
   const startDate = useRef(breakDate(new Date(2017, 10, 1))).current
   const [difDate, setDifDate] = useState(breakDate(new Date()))
+  // Skills data
+  const iconSize = "3x"
+  const languages = [
+    {
+      name: "PHP",
+      icon: {
+        icon: faPhp,
+        size: iconSize,
+      },
+    },
+    {
+      name: "Java Script",
+      icon: {
+        icon: faJs,
+        size: iconSize,
+      },
+    },
+    {
+      name: "SQL",
+      icon: {
+        icon: faDatabase,
+        size: iconSize,
+      },
+    },
+  ]
+
+  const frameworks = [
+    {
+      name: "Laravel",
+      icon: {
+        icon: faLaravel,
+        size: iconSize,
+      },
+    },
+    {
+      name: "Vue js",
+      icon: {
+        icon: faVuejs,
+        size: iconSize,
+      },
+    },
+    {
+      name: "React js",
+      icon: {
+        icon: faReact,
+        size: iconSize,
+      },
+    },
+  ]
+
+  const others = [
+    {
+      name: "Sass",
+      icon: {
+        icon: faSass,
+        size: iconSize,
+      },
+    },
+    {
+      name: "Git",
+      icon: {
+        icon: faCodeBranch,
+        size: iconSize,
+      },
+    },
+  ]
 
   useInterval(() => {
     let difference = breakDate(
@@ -36,6 +116,7 @@ export default function Home({ location }) {
 
   return (
     <Layout page={page}>
+      {/* Experience Counter */}
       <div className="flex justify-center bg-main h-64 items-center flex-wrap">
         <div className="flex justify-center w-full">
           <h1 className="text-3xl">Full stack developer for</h1>
@@ -68,6 +149,17 @@ export default function Home({ location }) {
               </span>
             </div>
           </div>
+        </div>
+      </div>
+      {/* What I know  */}
+      <div className="flex justify-center w-full bg-main flex-grow flex-wrap">
+        <div className="flex w-full justify-center items-center">
+          <h1 className="text-3xl pb-6">What I know</h1>
+        </div>
+        <div className="grid grid-cols-3 gap-4 w-full">
+          <Technologies title="Languages">{languages}</Technologies>
+          <Technologies title="Frameworks">{frameworks}</Technologies>
+          <Technologies title="Others">{others}</Technologies>
         </div>
       </div>
     </Layout>
