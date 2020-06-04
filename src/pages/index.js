@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react"
 import useInterval from "../components/custom-hooks/useInterval"
 // Components
 import Layout from "../components/layout"
-import Technologies from "../components/technologies"
+import Technologies from "../components/helper-components/technologies"
 // Support
 import sub from "date-fns/sub"
 import { faDatabase, faCodeBranch } from "@fortawesome/free-solid-svg-icons"
