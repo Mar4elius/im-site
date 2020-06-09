@@ -7,7 +7,8 @@ export default function Layout({ page, children }) {
   const quotes = {
     home: "The path will be overcome by the person walking it.",
     myCode: "Talk is cheap. Show me the code.",
-    aboutMe: "Good guy",
+    aboutMe:
+      "I'm a great believer in luck, and I find the harder I work, the more I have of it.",
   }
   // some page name come like 2 words
   const activePage = page.split(" ").join("")
