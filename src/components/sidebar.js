@@ -69,7 +69,7 @@ export default function Sidebar() {
 
   return (
     <div
-      className={`flex min-h-screen bg-sidebar z-10 ${
+      className={`flex min-h-screen bg-pink z-10 ${
         isFullSideBar ? "side-menu-open" : "side-menu"
       }`}
     >
