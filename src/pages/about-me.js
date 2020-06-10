@@ -32,29 +32,51 @@ export default function AboutMe({ location }) {
           quotes describe me as a person (at least that what I think about
           myself :D).
         </p>
+        <p>
+          I checked some other designer's personal websites and their websites
+          look much simplier in term of functionality. This is was done in order
+          to have some practise with React and Gatsby{" "}
+        </p>
         <div className="flex justify-center w-full mt-10">
           <Button value="Contact Me" onClick={handleClick}></Button>
         </div>
       </div>
       <GoogleMaps />
-      <Modal showModal={showModal} content={modalText} onClick={handleClick}>
-        <form id="contact-form" method="POST" action="https://formspree.io">
+      <Modal
+        showModal={showModal}
+        content={modalText}
+        onClick={handleClick}
+        header={"Contact Me"}
+      >
+        <form
+          id="contact-form"
+          method="POST"
+          action="https://formspree.io"
+          className="w-full"
+        >
           <div className="flex justify-center">
             <div className="w-1/2">
               <label htmlFor="name">Your Name:</label>
-              <input
-                type="text"
-                name="name"
-                required
-                className="border-black"
-              />
+              <input type="text" name="name" required />
             </div>
+
             <div className="w-1/2">
               <label htmlFor="email">Your Email:</label>
               <input type="email" name="email" required></input>
             </div>
           </div>
+
+          <div className="w-full flex justify-center">
+            <label htmlFor="message">Message</label>
+            <textarea
+              name="message"
+              rows="7"
+              minLength="25"
+              required
+            ></textarea>
+          </div>
         </form>
+        <div className="w-full"></div>
       </Modal>
     </Layout>
   )
