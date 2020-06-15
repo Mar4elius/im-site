@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import GoogleMaps from "../components/helper-components/google-maps"
 import Button from "../components/form-components/button"
 import Modal from "../components/helper-components/modal"
+import ContactForm from "../components/helper-components/contact-form"
 
 export default function AboutMe({ location }) {
   const page = location.state.activePage
@@ -48,52 +49,7 @@ export default function AboutMe({ location }) {
         onClick={handleClick}
         header={"Contact Me"}
       >
-        <form
-          id="contact-form"
-          method="POST"
-          action="https://formspree.io"
-          className="w-full"
-        >
-          <div className="flex w-full my-10">
-            <div className="w-1/2">
-              <label htmlFor="name" className="mr-4">
-                Your Name:
-              </label>
-              <input
-                type="text"
-                name="name"
-                className="border-2 border-black rounded"
-                required
-              />
-            </div>
-
-            <div className="w-1/2">
-              <label htmlFor="email" className="mr-4">
-                Your Email:
-              </label>
-              <input
-                type="email"
-                name="email"
-                className="border-2 border-black rounded"
-                required
-              ></input>
-            </div>
-          </div>
-
-          <div className="flex">
-            <label htmlFor="message" className="mr-4">
-              Message:
-            </label>
-            <textarea
-              name="message"
-              rows="7"
-              minLength="25"
-              className="border-2 border-black rounded w-full p-2"
-              required
-            ></textarea>
-          </div>
-        </form>
-        <div className="w-full"></div>
+        <ContactForm />
       </Modal>
     </Layout>
   )

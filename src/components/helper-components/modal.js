@@ -22,7 +22,7 @@ export default function ContactModal(props) {
           </div>
           <div className="m-8">
             <p>{props.content}</p>
-            <div>{props.children}</div>
+            {props.children}
           </div>
           <div className="flex w-full justify-evenly m-8">
             <Button value="Send message" onClick={handleConfirmClick} />
