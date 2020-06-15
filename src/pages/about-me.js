@@ -54,24 +54,41 @@ export default function AboutMe({ location }) {
           action="https://formspree.io"
           className="w-full"
         >
-          <div className="flex justify-center">
+          <div className="flex w-full my-10">
             <div className="w-1/2">
-              <label htmlFor="name">Your Name:</label>
-              <input type="text" name="name" required />
+              <label htmlFor="name" className="mr-4">
+                Your Name:
+              </label>
+              <input
+                type="text"
+                name="name"
+                className="border-2 border-black rounded"
+                required
+              />
             </div>
 
             <div className="w-1/2">
-              <label htmlFor="email">Your Email:</label>
-              <input type="email" name="email" required></input>
+              <label htmlFor="email" className="mr-4">
+                Your Email:
+              </label>
+              <input
+                type="email"
+                name="email"
+                className="border-2 border-black rounded"
+                required
+              ></input>
             </div>
           </div>
 
-          <div className="w-full flex justify-center">
-            <label htmlFor="message">Message</label>
+          <div className="flex">
+            <label htmlFor="message" className="mr-4">
+              Message:
+            </label>
             <textarea
               name="message"
               rows="7"
               minLength="25"
+              className="border-2 border-black rounded w-full p-2"
               required
             ></textarea>
           </div>

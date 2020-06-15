@@ -5,7 +5,7 @@ export default function Button({ value, onClick }) {
     <div>
       <button
         type="button"
-        className="py-2 px-4 rounded bg-pink"
+        className="py-2 px-4 rounded bg-pink hover:text-white hover:bg-dark-blue"
         onClick={onClick}
       >
         {value}

@@ -12,6 +12,7 @@ module.exports = {
   },
   variants: {
     ".text-dark-blue": ["responsive", "hover", "focus", "active"],
+    ".bg-dark-blue": ["responsive", "hover", "focus", "active"],
   },
   plugins: [],
 }
