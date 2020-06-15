@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-// Support
+// Components
 import Layout from "../components/layout"
 import GoogleMaps from "../components/helper-components/google-maps"
 import Button from "../components/form-components/button"
