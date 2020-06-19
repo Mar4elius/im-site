@@ -4,11 +4,11 @@ import Button from "../form-components/button"
 
 export default function ContactModal(props) {
   function handleConfirmClick() {
-    console.log("confirm")
+    props.onSubmitClick()
   }
 
   function handleCancelClick() {
-    props.onClick()
+    props.onCancelClick()
   }
 
   if (props.showModal) {

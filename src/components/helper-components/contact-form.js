@@ -1,58 +1,110 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 // Support
 import axios from "axios"
 
-export default function ContactForm() {
+export default function ContactForm({ isContactFormSubmitted }) {
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+
+  const handleOnChange = event => {
+    event.persist()
+    setInputs(prev => ({
+      ...prev,
+      [event.target.id]: event.target.value,
+    }))
+  }
+
+  const [serverState, setServerState] = useState({
+    submitting: false,
+    status: null,
+  })
+
+  const handleServerResponse = (ok, msg) => {
+    setServerState({
+      submitting: false,
+      status: { ok, msg },
+    })
+    if (ok) {
+      setInputs({
+        email: "",
+        message: "",
+      })
+    }
+  }
+
+  const [submitContactForm, setSubmitContactForm] = useState(true)
+
+  const handleOnSubmit = _ => {
+    setServerState({
+      submitting: true,
+    })
+    axios({
+      method: "POST",
+      url: "https://formspree.io/mgenyjvy",
+      data: inputs,
+    })
+      .then(response => {
+        handleServerResponse(true, "Great! Thank you for submitting an email.")
+      })
+      .catch(error => {
+        handleServerResponse(false, error.response.data.error)
+      })
+  }
+
+  if (isContactFormSubmitted && submitContactForm) {
+    handleOnSubmit()
+    setSubmitContactForm(false)
+  }
+
   return (
     <div id="contact-form">
-      <form
-        id="contact-form"
-        method="POST"
-        action="https://formspree.io/imarchenko1@protonmail.com"
-        className="w-full"
-      >
-        {/* use this to reply visitors and prevent spam via akismet */}
-        <input type="email" name="email" />
-        <div className="flex w-full my-10">
-          <div className="w-1/2">
-            <label htmlFor="name" className="mr-4">
-              Your Name:
-            </label>
-            <input
-              type="text"
-              name="name"
-              className="border-2 border-black rounded"
-              required
-            />
-          </div>
-
-          <div className="w-1/2">
-            <label htmlFor="email" className="mr-4">
-              Your Email:
-            </label>
-            <input
-              type="email"
-              name="email"
-              className="border-2 border-black rounded"
-              required
-            ></input>
-          </div>
-        </div>
-        <div className="flex">
-          <label htmlFor="message" className="mr-4">
-            Message:
+      <div className="flex w-full my-10">
+        <div className="w-1/2">
+          <label htmlFor="name" className="mr-4">
+            Your Name:
           </label>
-          <textarea
-            name="message"
-            rows="7"
-            minLength="25"
-            className="border-2 border-black rounded w-full p-2"
+          <input
+            id="name"
+            type="text"
+            name="name"
+            className="border-2 border-black rounded"
             required
-          ></textarea>
+            onChange={handleOnChange}
+            value={inputs.name}
+          />
         </div>
-        {/* use this to prevent spam */}
-        <input type="hidden" name="_gotcha" />
-      </form>
+
+        <div className="w-1/2">
+          <label htmlFor="email" className="mr-4">
+            Your Email:
+          </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            className="border-2 border-black rounded"
+            required
+            onChange={handleOnChange}
+            value={inputs.email}
+          />
+        </div>
+      </div>
+      <label htmlFor="message" className="mr-4">
+        Message:
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        rows="7"
+        minLength="25"
+        className="border-2 border-black rounded w-full p-2"
+        required
+        onChange={handleOnChange}
+        value={inputs.message}
+      />
 
       {/* <div className="w-full">
             <div class="col-lg-4 text_left">

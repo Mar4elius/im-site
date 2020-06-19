@@ -8,18 +8,26 @@ import ContactForm from "../components/helper-components/contact-form"
 
 export default function AboutMe({ location }) {
   const page = location.state.activePage
-  const [showModal, setShowModal] = useState(false)
 
   const modalText = `Want to get in touch with me? Be it to request more info about myself or my experience,
                     to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life,
                     or even if only for some nice cup of coffee here in stunning Edmonton... just feel free to drop me a line anytime.
                     I promise to reply A.S.A.P.`
 
-  const handleClick = _ => displayModal()
+  const [showModal, setShowModal] = useState(false)
 
   function displayModal() {
     setShowModal(!showModal)
   }
+
+  const showHideModal = _ => displayModal()
+
+  const [isFormSubmit, setIsFormSubmit] = useState(false)
+
+  function submitContactForm() {
+    setIsFormSubmit(true)
+  }
+
   return (
     <Layout page={page}>
       <div className="h-64 m-auto w-3/4 flex content-center flex-wrap">
@@ -39,17 +47,18 @@ export default function AboutMe({ location }) {
           to have some practise with React and Gatsby{" "}
         </p>
         <div className="flex justify-center w-full mt-10">
-          <Button value="Contact Me" onClick={handleClick}></Button>
+          <Button value="Contact Me" onClick={showHideModal}></Button>
         </div>
       </div>
       <GoogleMaps />
       <Modal
         showModal={showModal}
         content={modalText}
-        onClick={handleClick}
+        onCancelClick={showHideModal}
+        onSubmitClick={submitContactForm}
         header={"Contact Me"}
       >
-        <ContactForm />
+        <ContactForm isContactFormSubmitted={isFormSubmit} />
       </Modal>
     </Layout>
   )

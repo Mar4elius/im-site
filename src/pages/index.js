@@ -17,7 +17,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 export default function Home({ location }) {
-  const page = location.state.activePage
+  // for some reason location.state on initial load of the page is empty
+  const page = location.state?.activePage ?? "home"
   // Experience data
   const startDate = useRef(breakDate(new Date(2017, 10, 1))).current
   const [difDate, setDifDate] = useState(breakDate(new Date()))
@@ -113,7 +114,6 @@ export default function Home({ location }) {
       seconds: date.getSeconds(),
     }
   }
-
   return (
     <Layout page={page}>
       {/* Experience Counter */}
