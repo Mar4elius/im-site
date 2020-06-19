@@ -18,14 +18,12 @@ export default function ContactModal(props) {
         {/* Modal content */}
         <div className="w-1/2 m-auto bg-white rounded-lg border-2 opacity-100">
           {/* Modal Header */}
-          <div className=" my-8 flex justify-center w-full">
-            <h1 className="bold">{props.header}</h1>
-          </div>
-          <div className="m-8">
+          <div className="w-full">{props.header}</div>
+          <div className="mb-8 mx-8">
             <p>{props.content}</p>
             {props.children}
           </div>
-          <div className="flex w-full justify-evenly m-8">
+          <div className="flex w-full justify-center m-8">
             <Button value="Send message" onClick={handleConfirmClick} />
             <Button value="Cancel" onClick={handleCancelClick} />
           </div>

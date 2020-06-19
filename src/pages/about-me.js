@@ -6,13 +6,64 @@ import Button from "../components/form-components/button"
 import Modal from "../components/helper-components/modal"
 import ContactForm from "../components/helper-components/contact-form"
 
-export default function AboutMe({ location }) {
+import {
+  faHome,
+  faEnvelopeOpen,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+export default function AboutMe({ location, data }) {
   const page = location.state.activePage
 
-  const modalText = `Want to get in touch with me? Be it to request more info about myself or my experience,
-                    to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life,
-                    or even if only for some nice cup of coffee here in stunning Edmonton... just feel free to drop me a line anytime.
-                    I promise to reply A.S.A.P.`
+  const contactIcons = [
+    {
+      icon: faPhone,
+      size: "lg",
+      value: "+1 780 312-9282",
+    },
+    {
+      icon: faEnvelopeOpen,
+      size: "lg",
+      value: "marauman@gmail.com",
+    },
+    {
+      icon: faHome,
+      size: "lg",
+      value: "Edmonton, AB",
+    },
+  ]
+
+  const modalHeader = (
+    <div className="flex">
+      <h1 className="my-8 ml-8 font-bold">Let's Chat!</h1>
+      <ul className="flex justify-between m-8">
+        {contactIcons.map(icon => {
+          return (
+            <li className="text-dark-blue flex" key={icon.value}>
+              <span className="mx-3">
+                <FontAwesomeIcon icon={icon.icon} size={icon.size} />
+              </span>
+              <p>{icon.value}</p>
+            </li>
+          )
+        })}
+      </ul>
+    </div>
+  )
+
+  const modalText = (
+    <div className="w-full">
+      <p>
+        Want to get in touch with me? Be it to request more info about myself or
+        my experience, to ask for my resume, tips on how to solve your sudoku,
+        random questions about the universe and the meaning of life, or even if
+        only for some nice cup of coffee here in stunning Edmonton... just feel
+        free to drop me a line anytime.
+      </p>
+      <p className="mt-8">I promise to reply A.S.A.P.</p>
+    </div>
+  )
 
   const [showModal, setShowModal] = useState(false)
 
@@ -56,7 +107,7 @@ export default function AboutMe({ location }) {
         content={modalText}
         onCancelClick={showHideModal}
         onSubmitClick={submitContactForm}
-        header={"Contact Me"}
+        header={modalHeader}
       >
         <ContactForm isContactFormSubmitted={isFormSubmit} />
       </Modal>
