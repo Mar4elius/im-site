@@ -71,8 +71,6 @@ export default function AboutMe({ location, data }) {
     setShowModal(!showModal)
   }
 
-  const showHideModal = _ => displayModal()
-
   const [isFormSubmit, setIsFormSubmit] = useState(false)
 
   function submitContactForm() {
@@ -98,14 +96,14 @@ export default function AboutMe({ location, data }) {
           to have some practise with React and Gatsby{" "}
         </p>
         <div className="flex justify-center w-full mt-10">
-          <Button value="Contact Me" onClick={showHideModal}></Button>
+          <Button value="Contact Me" onClick={displayModal}></Button>
         </div>
       </div>
       <GoogleMaps />
       <Modal
         showModal={showModal}
         content={modalText}
-        onCancelClick={showHideModal}
+        onCancelClick={displayModal}
         onSubmitClick={submitContactForm}
         header={modalHeader}
       >
