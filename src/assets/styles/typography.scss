@@ -7,8 +7,8 @@ body,
 html * {
   font-family: "Spartan", serif;
   --light-grey: #a7c0cd;
-  --pink: #f76c6c;
-  --red: #b23850;
+  --custom-pink: #f76c6c;
+  --custom-red: #b23850;
   --dark-blue: #374785;
 }
 
@@ -17,7 +17,7 @@ html * {
 }
 
 .bg-pink {
-  background-color: var(--pink);
+  background-color: var(--custom-pink);
 }
 
 .bg-dark-blue {
@@ -25,7 +25,7 @@ html * {
 }
 
 .header-color {
-  color: var(--red);
+  color: var(--custom-red);
 }
 
 .hover-color {
@@ -42,7 +42,7 @@ h3 {
 }
 
 .text-pink {
-  color: var(--pink);
+  color: var(--custom-pink);
 }
 
 .text-dark-blue {

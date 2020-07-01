@@ -15,6 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function AboutMe({ location, data }) {
   const page = location.state.activePage
+  const [showModal, setShowModal] = useState(false)
 
   const contactIcons = [
     {
@@ -65,16 +66,12 @@ export default function AboutMe({ location, data }) {
     </div>
   )
 
-  const [showModal, setShowModal] = useState(false)
-
-  function displayModal() {
-    setShowModal(!showModal)
+  function handleOnClick() {
+    setShowModal(true)
   }
 
-  const [isFormSubmit, setIsFormSubmit] = useState(false)
-
-  function submitContactForm() {
-    setIsFormSubmit(true)
+  function handleCancelClick() {
+    setShowModal(false)
   }
 
   return (
@@ -96,18 +93,17 @@ export default function AboutMe({ location, data }) {
           to have some practise with React and Gatsby{" "}
         </p>
         <div className="flex justify-center w-full mt-10">
-          <Button value="Contact Me" onClick={displayModal}></Button>
+          <Button value="Contact Me" onClick={handleOnClick}></Button>
         </div>
       </div>
       <GoogleMaps />
       <Modal
         showModal={showModal}
-        content={modalText}
-        onCancelClick={displayModal}
-        onSubmitClick={submitContactForm}
         header={modalHeader}
+        content={modalText}
+        onCancelClick={handleCancelClick}
       >
-        <ContactForm isContactFormSubmitted={isFormSubmit} />
+        <ContactForm onCancelClick={handleCancelClick} />
       </Modal>
     </Layout>
   )

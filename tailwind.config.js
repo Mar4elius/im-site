@@ -4,8 +4,8 @@ module.exports = {
     extend: {
       colors: {
         "light-grey": "#A7C0CD",
-        pink: "#F76C6C",
-        red: "#B23850",
+        "custom-pink": "#F76C6C",
+        "custom-red": "#B23850",
         "dark-blue": "#374785",
       },
     },
@@ -13,6 +13,7 @@ module.exports = {
   variants: {
     ".text-dark-blue": ["responsive", "hover", "focus", "active"],
     ".bg-dark-blue": ["responsive", "hover", "focus", "active"],
+    "text-custom-red": ["responsive", "hover", "focus", "active"],
   },
   plugins: [],
 }

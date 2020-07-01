@@ -1,12 +1,6 @@
 import React from "react"
-// Components
-import Button from "../form-components/button"
 
 export default function ContactModal(props) {
-  function handleConfirmClick() {
-    props.onSubmitClick()
-  }
-
   function handleCancelClick() {
     props.onCancelClick()
   }
@@ -28,12 +22,8 @@ export default function ContactModal(props) {
           {/* Modal Header */}
           <div className="w-full">{props.header}</div>
           <div className="mb-8 mx-8">
-            <p>{props.content}</p>
+            {props.content}
             {props.children}
-          </div>
-          <div className="flex w-full justify-center m-8">
-            <Button value="Send message" onClick={handleConfirmClick} />
-            <Button value="Cancel" onClick={handleCancelClick} />
           </div>
         </div>
       </div>
