@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 // Support
 import axios from "axios"
 import Button from "../form-components/button"
+import { faSpinner } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function ContactForm(props) {
   const [inputs, setInputs] = useState({
@@ -127,8 +129,26 @@ export default function ContactForm(props) {
     props.onCancelClick()
   }
 
+  const loader = () => {
+    if (serverState.submitting) {
+      return (
+        <div class="w-full flex justify-center">
+          <FontAwesomeIcon
+            icon={faSpinner}
+            size="3x"
+            className="text-dark-blue"
+            spin
+          />
+        </div>
+      )
+    } else {
+      return null
+    }
+  }
+
   return (
     <div id="contact-form">
+      {loader()}
       {showMessage()}
       <div className="w-full my-10 flex">
         <div className="w-1/2 flex-wrap">
