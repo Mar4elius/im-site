@@ -28,8 +28,7 @@ export default function ContactForm(props) {
     })
     axios({
       method: "POST",
-      //   url: process.env.FORMSPREE_URL,
-      url: `https://formspree.io/xjvaeygn`,
+      url: process.env.GATSBY_FORMSPREE_URL,
       data: inputs,
     })
       .then(_ => {
