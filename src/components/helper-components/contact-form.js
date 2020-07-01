@@ -26,14 +26,20 @@ export default function ContactForm(props) {
     })
     axios({
       method: "POST",
-      url: "https://formspree.io/xjvaeygn1",
+      //   url: process.env.FORMSPREE_URL,
+      url: `https://formspree.io/xjvaeygn`,
       data: inputs,
     })
-      .then(response => {
+      .then(_ => {
         handleServerResponse(true, "Great! Thank you for submitting an email.")
       })
       .catch(error => {
-        handleServerResponse(false, error.response.data.error)
+        //put data into log
+        console.log(error)
+        handleServerResponse(
+          false,
+          "Hmm, something went wrong. Please try again."
+        )
       })
   }
 
@@ -77,13 +83,13 @@ export default function ContactForm(props) {
   let showMessage = _ => {
     if (infoMessage && serverState.status?.ok) {
       return (
-        <div className="w-full bg-green-600 rounded p-2 opacity-25">
+        <div className="w-full bg-green-600 rounded p-2 opacity-75 flex justify-center mt-10">
           <p>{infoMessage}</p>
         </div>
       )
     } else if (infoMessage && !serverState.status?.ok) {
       return (
-        <div className="w-full bg-red-600 rounded p-2 opacity-25">
+        <div className="w-full bg-red-600 rounded p-2 opacity-75 flex justify-center mt-10">
           <p>{infoMessage}</p>
         </div>
       )
@@ -128,13 +134,13 @@ export default function ContactForm(props) {
         <div className="w-1/2 flex-wrap">
           <div className="w-full flex">
             <label htmlFor="name" className="mr-4">
-              Your Name:
+              Name:
             </label>
             <input
               id="name"
               type="text"
               name="name"
-              className="border-2 border-black rounded flex-1 mr-4"
+              className="border-2 border-black rounded flex-1 mr-4 p-1"
               required
               onChange={handleOnChange}
               value={inputs.name}
@@ -148,13 +154,13 @@ export default function ContactForm(props) {
         <div className="w-1/2 flex-wrap">
           <div className="w-full flex">
             <label htmlFor="email" className="mr-4">
-              Your Email:
+              Email:
             </label>
             <input
               id="email"
               type="email"
               name="email"
-              className="border-2 border-black rounded flex-1"
+              className="border-2 border-black rounded flex-1 p-1"
               required
               onChange={handleOnChange}
               value={inputs.email}
