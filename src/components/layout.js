@@ -19,8 +19,18 @@ import {
   faCodeBranch,
 } from "@fortawesome/free-solid-svg-icons"
 
+import {
+  faGithub,
+  faLinkedin,
+  faSass,
+  faPhp,
+  faReact,
+  faVuejs,
+  faLaravel,
+  faJs,
+} from "@fortawesome/free-brands-svg-icons"
+
 library.add(
-  fab,
   faHome,
   faLaptopCode,
   faAddressCard,
@@ -31,7 +41,16 @@ library.add(
   faSpinner,
   faEnvelopeOpen,
   faPhone,
-  faCodeBranch
+  faCodeBranch,
+  // brands
+  faGithub,
+  faLinkedin,
+  faSass,
+  faPhp,
+  faReact,
+  faVuejs,
+  faLaravel,
+  faJs
 )
 
 export default function Layout({ page, children }) {
