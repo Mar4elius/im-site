@@ -3,14 +3,6 @@ import React, { useState, useRef } from "react"
 // Support
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faHome,
-  faLaptopCode,
-  faAddressCard,
-  faArrowRight,
-  faArrowLeft,
-} from "@fortawesome/free-solid-svg-icons"
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 export default function Sidebar() {
   const [isFullSideBar, setFullSideBar] = useState(false)
@@ -22,7 +14,7 @@ export default function Sidebar() {
       name: "Home",
       url: "/", //TODO:Add URL
       icon: {
-        icon: faHome,
+        icon: "home",
         size: iconSize,
       },
     },
@@ -30,7 +22,7 @@ export default function Sidebar() {
       name: "My Code",
       url: "/my-code",
       icon: {
-        icon: faLaptopCode,
+        icon: "laptop-code",
         size: iconSize,
       },
     },
@@ -38,7 +30,7 @@ export default function Sidebar() {
       name: "About Me",
       url: "/about-me",
       icon: {
-        icon: faAddressCard,
+        icon: "address-card",
         size: iconSize,
       },
     },
@@ -48,7 +40,7 @@ export default function Sidebar() {
       name: "Git Hub",
       url: "https://github.com/Mar4elius",
       icon: {
-        icon: faGithub,
+        icon: ["fab", "github"],
         size: iconSize,
       },
     },
@@ -56,7 +48,7 @@ export default function Sidebar() {
       name: "Linkedin",
       url: "https://www.linkedin.com/in/igor-marchenko-126b00132/",
       icon: {
-        icon: faLinkedin,
+        icon: ["fab", "linkedin"],
         size: iconSize,
       },
     },
@@ -91,7 +83,7 @@ export default function Sidebar() {
           className="cursor-pointer flex justify-center p-6 text-white hover:text-dark-blue"
         >
           <FontAwesomeIcon
-            icon={isFullSideBar ? faArrowLeft : faArrowRight}
+            icon={isFullSideBar ? "arrow-left" : "arrow-right"}
             size="2x"
           />
         </li>

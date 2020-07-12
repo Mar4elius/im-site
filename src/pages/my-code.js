@@ -25,7 +25,7 @@ export default function MyCode({ location }) {
       description: "Something meaningful about the project",
       link: "url",
       gitHub: "github",
-      technologies: ["faLaravel"],
+      technologies: [["fab", "faLaravel"]],
     },
   ]
   return (

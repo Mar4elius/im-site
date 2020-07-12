@@ -6,11 +6,7 @@ import Button from "../components/form-components/button"
 import Modal from "../components/helper-components/modal"
 import ContactForm from "../components/helper-components/contact-form"
 
-import {
-  faHome,
-  faEnvelopeOpen,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons"
+// Font awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function AboutMe({ location, data }) {
@@ -19,17 +15,17 @@ export default function AboutMe({ location, data }) {
 
   const contactIcons = [
     {
-      icon: faPhone,
+      icon: "phone",
       size: "lg",
       value: "+1 780 312-9282",
     },
     {
-      icon: faEnvelopeOpen,
+      icon: "envelope-open",
       size: "lg",
       value: "marauman@gmail.com",
     },
     {
-      icon: faHome,
+      icon: "home",
       size: "lg",
       value: "Edmonton, AB",
     },

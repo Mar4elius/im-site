@@ -2,6 +2,38 @@ import React from "react"
 import Sidebar from "../components/sidebar"
 import Header from "../components/header"
 
+// Font awesome
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import {
+  faHome,
+  faLaptopCode,
+  faAddressCard,
+  faArrowRight,
+  faArrowLeft,
+  faDatabase,
+  faAddressBook,
+  faSpinner,
+  faEnvelopeOpen,
+  faPhone,
+  faCodeBranch,
+} from "@fortawesome/free-solid-svg-icons"
+
+library.add(
+  fab,
+  faHome,
+  faLaptopCode,
+  faAddressCard,
+  faArrowRight,
+  faArrowLeft,
+  faDatabase,
+  faAddressBook,
+  faSpinner,
+  faEnvelopeOpen,
+  faPhone,
+  faCodeBranch
+)
+
 export default function Layout({ page, children }) {
   // Header quotes
   const quotes = {

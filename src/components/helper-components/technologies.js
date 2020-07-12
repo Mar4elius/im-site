@@ -1,8 +1,6 @@
 // React
 import React from "react"
-// Support
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
 export default function Technologies(props) {
   return (
     <div className="w-full">

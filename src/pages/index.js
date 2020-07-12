@@ -6,15 +6,6 @@ import Layout from "../components/layout"
 import Technologies from "../components/helper-components/technologies"
 // Support
 import sub from "date-fns/sub"
-import { faDatabase, faCodeBranch } from "@fortawesome/free-solid-svg-icons"
-import {
-  faPhp,
-  faJs,
-  faLaravel,
-  faVuejs,
-  faSass,
-  faReact,
-} from "@fortawesome/free-brands-svg-icons"
 
 export default function Home({ location }) {
   // for some reason location.state on initial load of the page is empty
@@ -28,21 +19,21 @@ export default function Home({ location }) {
     {
       name: "PHP",
       icon: {
-        icon: faPhp,
+        icon: ["fab", "php"],
         size: iconSize,
       },
     },
     {
       name: "Java Script",
       icon: {
-        icon: faJs,
+        icon: ["fab", "js"],
         size: iconSize,
       },
     },
     {
       name: "SQL",
       icon: {
-        icon: faDatabase,
+        icon: ["fas", "database"],
         size: iconSize,
       },
     },
@@ -52,21 +43,21 @@ export default function Home({ location }) {
     {
       name: "Laravel",
       icon: {
-        icon: faLaravel,
+        icon: ["fab", "laravel"],
         size: iconSize,
       },
     },
     {
       name: "Vue js",
       icon: {
-        icon: faVuejs,
+        icon: ["fab", "vuejs"],
         size: iconSize,
       },
     },
     {
       name: "React js",
       icon: {
-        icon: faReact,
+        icon: ["fab", "react"],
         size: iconSize,
       },
     },
@@ -76,14 +67,14 @@ export default function Home({ location }) {
     {
       name: "Sass",
       icon: {
-        icon: faSass,
+        icon: ["fab", "sass"],
         size: iconSize,
       },
     },
     {
       name: "Git",
       icon: {
-        icon: faCodeBranch,
+        icon: "code-branch",
         size: iconSize,
       },
     },

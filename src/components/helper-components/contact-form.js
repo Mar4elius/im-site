@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 // Support
 import axios from "axios"
 import Button from "../form-components/button"
-import { faSpinner } from "@fortawesome/free-solid-svg-icons"
+// Font awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function ContactForm(props) {
@@ -136,7 +136,7 @@ export default function ContactForm(props) {
       return (
         <div class="w-full flex justify-center">
           <FontAwesomeIcon
-            icon={faSpinner}
+            icon={["fas", "faSpinner"]}
             size="3x"
             className="text-dark-blue"
             spin
