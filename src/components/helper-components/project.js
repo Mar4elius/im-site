@@ -5,17 +5,17 @@ export default function Project({ project }) {
   return (
     <div className="w-full">
       <h2 className="text-center my-12">{project.name}</h2>
-      <div className="bg-white rounded-lg p-6 h-64 mx-12 flex justify-between">
+      <div className="bg-white rounded-lg p-6 h-64 mx-12 flex flex-wrap">
         <p>{project.description}</p>
-        <ul className="flex">
+        <ul className="flex flex-1 items-end">
           {project.technologies.map(t => (
-            <li className="px-2">
+            <li className="px-2" key={project.name}>
               <FontAwesomeIcon icon={t} size="2x" />
             </li>
           ))}
         </ul>
 
-        <a>
+        <a className="flex items-end">
           <FontAwesomeIcon
             icon={["fab", "github"]}
             size="2x"

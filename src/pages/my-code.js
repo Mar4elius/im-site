@@ -11,21 +11,21 @@ export default function MyCode({ location }) {
       description: "Something meaningful about the project",
       link: "url",
       gitHub: "github",
-      technologies: ["faLaravel", "faVuejs"],
+      technologies: [["fab", "laravel"], ["fab", "vuejs"], "database"],
     },
     {
       name: "Future Project 2",
       description: "Something meaningful about the project",
       link: "url",
       gitHub: "github",
-      technologies: ["faLaravel", "faReact"],
+      technologies: [["fab", "laravel"], ["fab", "react"], "database"],
     },
     {
       name: "Future Project 3",
       description: "Something meaningful about the project",
       link: "url",
       gitHub: "github",
-      technologies: [["fab", "faLaravel"]],
+      technologies: [["fab", "laravel"]],
     },
   ]
   return (
