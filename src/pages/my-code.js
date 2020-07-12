@@ -7,36 +7,32 @@ export default function MyCode({ location }) {
   const page = location.state.activePage
   const projects = [
     {
-      name: "Future Project",
+      name: "Future Project 1",
       description: "Something meaningful about the project",
       link: "url",
       gitHub: "github",
-      technologies: ["Laravel"],
+      technologies: ["faLaravel", "faVuejs"],
     },
     {
-      name: "Future Project",
+      name: "Future Project 2",
       description: "Something meaningful about the project",
       link: "url",
       gitHub: "github",
-      technologies: ["Laravel"],
+      technologies: ["faLaravel", "faReact"],
     },
     {
-      name: "Future Project",
+      name: "Future Project 3",
       description: "Something meaningful about the project",
       link: "url",
       gitHub: "github",
-      technologies: ["Laravel"],
+      technologies: ["faLaravel"],
     },
   ]
   return (
     <Layout page={page}>
-      {/* <div className="w-full flex justify-center h-64">
-        <p>Nothing here yet. :D </p>
-        <p>I'm working on something to show something here.</p>
-      </div> */}
-      <div className="w-full flex justify-between">
+      <div className="w-full flex justify-between items-center">
         {projects.map(project => {
-          return <Project project={project} />
+          return <Project project={project} key={project.name} />
         })}
       </div>
     </Layout>

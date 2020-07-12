@@ -121,6 +121,9 @@ export default function ContactForm(props) {
     if (Object.keys(fieldErrors).length > 0) {
       validate()
     }
+    // This array contains so called dependencies for useEffect,
+    // that is, variables on which useEffect depends on to re-run.
+    // When the array is empty, the effect runs only once
   }, [inputs])
   // \ validation
 
