@@ -5,7 +5,7 @@ export default function Project({ project }) {
   return (
     <div className="w-full">
       <h2 className="text-center my-12">{project.name}</h2>
-      <div className="bg-white rounded-lg p-6 h-64 mx-12 flex flex-wrap hover:ease-in-out duration-500">
+      <div className="bg-white rounded-lg p-6 h-64 mx-12 flex flex-wrap grow">
         <p>{project.description}</p>
         <ul className="flex flex-1 items-end">
           {project.technologies.map(t => (
