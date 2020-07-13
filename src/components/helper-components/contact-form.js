@@ -136,7 +136,7 @@ export default function ContactForm(props) {
       return (
         <div class="w-full flex justify-center">
           <FontAwesomeIcon
-            icon={["fas", "faSpinner"]}
+            icon="spinner"
             size="3x"
             className="text-dark-blue"
             spin

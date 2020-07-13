@@ -4,7 +4,6 @@ import Header from "../components/header"
 
 // Font awesome
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
 import {
   faHome,
   faLaptopCode,
