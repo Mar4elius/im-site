@@ -8,7 +8,7 @@ export default function MyCode({ location }) {
   const projects = [
     {
       name: "Future Project 1",
-      description: "Something meaningful about the project",
+      description: "Working on it",
       link: "url",
       gitHub: "github",
       technologies: [["fab", "laravel"], ["fab", "vuejs"], "database"],
@@ -16,7 +16,7 @@ export default function MyCode({ location }) {
     },
     {
       name: "Future Project 2",
-      description: "Something meaningful about the project",
+      description: "Working on it",
       link: "url",
       gitHub: "github",
       technologies: [["fab", "laravel"], ["fab", "react"], "database"],
@@ -24,7 +24,7 @@ export default function MyCode({ location }) {
     },
     {
       name: "Future Project 3",
-      description: "Something meaningful about the project",
+      description: "Working on it",
       link: "url",
       gitHub: "github",
       technologies: [["fab", "laravel"]],

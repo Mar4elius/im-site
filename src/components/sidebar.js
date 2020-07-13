@@ -69,7 +69,7 @@ export default function Sidebar() {
         <li className="flex justify-center pt-10 pb-5">
           <img
             src="../images/creator_photo.jpg"
-            alt="creator-photo"
+            alt="creator"
             className="h-16 w-16 rounded-full"
           />
         </li>
@@ -114,7 +114,7 @@ export default function Sidebar() {
               key={menu.name}
               className="cursor-pointer flex justify-center p-6  hover:text-dark-blue"
             >
-              <a href={menu.url} target="_blank">
+              <a href={menu.url} target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={menu.icon.icon} size={menu.icon.size} />
               </a>
               <p className={`${isFullSideBar ? "show-name" : "hide-name"}`}>
