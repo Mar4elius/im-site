@@ -10,7 +10,7 @@ import ContactForm from "../components/helper-components/contact-form"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function AboutMe({ location, data }) {
-  const page = location.state.activePage
+  const page = location.state?.activePage ?? "about-me"
   const [showModal, setShowModal] = useState(false)
 
   const contactIcons = [

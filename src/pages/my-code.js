@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Project from "../components/helper-components/project"
 
 export default function MyCode({ location }) {
-  const page = location.state.activePage
+  const page = location.state?.activePage ?? "my-code"
   const projects = [
     {
       name: "Future Project 1",
