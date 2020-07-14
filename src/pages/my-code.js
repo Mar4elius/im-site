@@ -35,9 +35,13 @@ export default function MyCode({ location }) {
   function getRandomKey() {
     return Math.floor(Math.random() * 90000) + 10000
   }
+
   return (
     <Layout page={page}>
-      <div className="w-full flex justify-between items-center">
+      <div className="w-full h-32 flex items-center justify-center">
+        <h2>Nothing to check here yet. :( But I'm working on it. :D</h2>
+      </div>
+      <div className="flex justify-between items-center">
         {projects.map(project => {
           return <Project project={project} key={project.key} />
         })}
