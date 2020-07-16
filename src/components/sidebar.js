@@ -1,10 +1,26 @@
 // React
 import React, { useState, useRef } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 // Support
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// Assets
+import creatorPhoto from "../assets/images/creator_photo.jpg"
 
 export default function Sidebar() {
+  //graphQL data
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            author
+            email
+          }
+        }
+      }
+    `
+  )
   const [isFullSideBar, setFullSideBar] = useState(false)
   let isClicked = useRef(false)
   const iconSize = "lg"
@@ -68,14 +84,16 @@ export default function Sidebar() {
       <ul className="w-24 justify-center align-middle">
         <li className="flex justify-center pt-10 pb-5">
           <img
-            src="../images/creator_photo.jpg"
+            src={creatorPhoto}
             alt="creator"
             className="h-16 w-16 rounded-full"
           />
         </li>
         <li className={`${isFullSideBar ? "fade-in" : "fade-out invisible"}`}>
           <div className="flex pl-6 flex-column text-sm text-white">
-            <span>Igor Marchenko marauman@gmail.com</span>
+            <span>
+              {data.site.siteMetadata.author} {data.site.siteMetadata.email}
+            </span>
           </div>
         </li>
         <li
