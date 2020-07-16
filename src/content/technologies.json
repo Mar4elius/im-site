@@ -1,0 +1,40 @@
+{
+  "languages": [
+    {
+      "name": "PHP",
+      "icon": { "icon": ["fab", "php"], "size": "3x" }
+    },
+    {
+      "name": "Java Script",
+      "icon": { "icon": ["fab", "js"], "size": "3x" }
+    },
+    {
+      "name": "SQL",
+      "icon": { "icon": ["fas", "database"], "size": "3x" }
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "Laravel",
+      "icon": { "icon": ["fab", "laravel"], "size": "3x" }
+    },
+    {
+      "name": "Vue js",
+      "icon": { "icon": ["fab", "vuejs"], "size": "3x" }
+    },
+    {
+      "name": "React js",
+      "icon": { "icon": ["fab", "react"], "size": "3x" }
+    }
+  ],
+  "others": [
+    {
+      "name": "Sass",
+      "icon": { "icon": ["fab", "sass"], "size": "3x" }
+    },
+    {
+      "name": "Git",
+      "icon": { "icon": "code-branch", "size": "3x" }
+    }
+  ]
+}

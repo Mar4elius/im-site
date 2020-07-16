@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import Technologies from "../components/helper-components/technologies"
 // Support
 import sub from "date-fns/sub"
+// Data
+import skillsJson from "../content/technologies.json"
 
 export default function Home({ location }) {
   // for some reason location.state on initial load of the page is empty
@@ -13,72 +15,6 @@ export default function Home({ location }) {
   // Experience data
   const startDate = useRef(breakDate(new Date(2017, 10, 1))).current
   const [difDate, setDifDate] = useState(breakDate(new Date()))
-  // Skills data
-  const iconSize = "3x"
-  const languages = [
-    {
-      name: "PHP",
-      icon: {
-        icon: ["fab", "php"],
-        size: iconSize,
-      },
-    },
-    {
-      name: "Java Script",
-      icon: {
-        icon: ["fab", "js"],
-        size: iconSize,
-      },
-    },
-    {
-      name: "SQL",
-      icon: {
-        icon: ["fas", "database"],
-        size: iconSize,
-      },
-    },
-  ]
-
-  const frameworks = [
-    {
-      name: "Laravel",
-      icon: {
-        icon: ["fab", "laravel"],
-        size: iconSize,
-      },
-    },
-    {
-      name: "Vue js",
-      icon: {
-        icon: ["fab", "vuejs"],
-        size: iconSize,
-      },
-    },
-    {
-      name: "React js",
-      icon: {
-        icon: ["fab", "react"],
-        size: iconSize,
-      },
-    },
-  ]
-
-  const others = [
-    {
-      name: "Sass",
-      icon: {
-        icon: ["fab", "sass"],
-        size: iconSize,
-      },
-    },
-    {
-      name: "Git",
-      icon: {
-        icon: "code-branch",
-        size: iconSize,
-      },
-    },
-  ]
 
   useInterval(() => {
     let difference = breakDate(
@@ -148,9 +84,11 @@ export default function Home({ location }) {
           <h1 className="text-3xl pb-6">What I know</h1>
         </div>
         <div className="grid grid-cols-3 gap-4 w-full">
-          <Technologies title="Languages">{languages}</Technologies>
-          <Technologies title="Frameworks">{frameworks}</Technologies>
-          <Technologies title="Others">{others}</Technologies>
+          <Technologies title="Languages">{skillsJson.languages}</Technologies>
+          <Technologies title="Frameworks">
+            {skillsJson.frameworks}
+          </Technologies>
+          <Technologies title="Others">{skillsJson.others}</Technologies>
         </div>
       </div>
     </Layout>
