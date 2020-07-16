@@ -6,6 +6,8 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // Assets
 import creatorPhoto from "../assets/images/creator_photo.jpg"
+// Data
+import sidebarJson from "../content/sidebarData.json"
 
 export default function Sidebar() {
   //graphQL data
@@ -23,52 +25,6 @@ export default function Sidebar() {
   )
   const [isFullSideBar, setFullSideBar] = useState(false)
   let isClicked = useRef(false)
-  const iconSize = "lg"
-
-  const sideMenuOptionsInternal = [
-    {
-      name: "Home",
-      url: "/", //TODO:Add URL
-      icon: {
-        icon: "home",
-        size: iconSize,
-      },
-    },
-    {
-      name: "My Code",
-      url: "/my-code",
-      icon: {
-        icon: "laptop-code",
-        size: iconSize,
-      },
-    },
-    {
-      name: "About Me",
-      url: "/about-me",
-      icon: {
-        icon: "address-card",
-        size: iconSize,
-      },
-    },
-  ]
-  const sideMenuOptionsExternal = [
-    {
-      name: "Git Hub",
-      url: "https://github.com/Mar4elius",
-      icon: {
-        icon: ["fab", "github"],
-        size: iconSize,
-      },
-    },
-    {
-      name: "Linkedin",
-      url: "https://www.linkedin.com/in/igor-marchenko-126b00132/",
-      icon: {
-        icon: ["fab", "linkedin"],
-        size: iconSize,
-      },
-    },
-  ]
 
   function handleArrowClick() {
     isClicked.current = !isClicked.current
@@ -106,7 +62,7 @@ export default function Sidebar() {
           />
         </li>
         {/* Internal Links */}
-        {sideMenuOptionsInternal.map(menu => {
+        {sidebarJson.sideMenuOptionsInternal.map(menu => {
           return (
             <li
               key={menu.name}
@@ -126,7 +82,7 @@ export default function Sidebar() {
           )
         })}
         {/* External Links */}
-        {sideMenuOptionsExternal.map(menu => {
+        {sidebarJson.sideMenuOptionsExternal.map(menu => {
           return (
             <li
               key={menu.name}

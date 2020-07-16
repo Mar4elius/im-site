@@ -1,0 +1,47 @@
+{
+  "sideMenuOptionsInternal": [
+    {
+      "name": "Home",
+      "url": "/",
+      "icon": {
+        "icon": "home",
+        "size": "lg"
+      }
+    },
+    {
+      "name": "My Code",
+      "url": "/my-code",
+      "icon": {
+        "icon": "laptop-code",
+        "size": "lg"
+      }
+    },
+    {
+      "name": "About Me",
+      "url": "/about-me",
+      "icon": {
+        "icon": "address-card",
+        "size": "lg"
+      }
+    }
+  ],
+
+  "sideMenuOptionsExternal": [
+    {
+      "name": "Git Hub",
+      "url": "https://github.com/Mar4elius",
+      "icon": {
+        "icon": ["fab", "github"],
+        "size": "lg"
+      }
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/igor-marchenko-126b00132/",
+      "icon": {
+        "icon": ["fab", "linkedin"],
+        "size": "lg"
+      }
+    }
+  ]
+}
