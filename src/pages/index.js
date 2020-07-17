@@ -13,7 +13,7 @@ export default function Home({ location }) {
   // for some reason location.state on initial load of the page is empty
   const page = location.state?.activePage ?? "home"
   // Experience data
-  const startDate = useRef(breakDate(new Date(2017, 10, 1))).current
+  const startDate = useRef(breakDate(new Date(2018, 10, 15))).current
   const [difDate, setDifDate] = useState(breakDate(new Date()))
 
   useInterval(() => {

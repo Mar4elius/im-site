@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "name": "Project 1",
+      "description": "Working on it",
+      "link": "url",
+      "github": "github",
+      "technologies": [["fab", "laravel"], ["fab", "vuejs"], "database"]
+    },
+    {
+      "name": "Project 2",
+      "description": "Working on it",
+      "link": "url",
+      "github": "github",
+      "technologies": [["fab", "laravel"], ["fab", "react"], "database"]
+    },
+    {
+      "name": "Project 3",
+      "description": "Working on it",
+      "link": "url",
+      "github": "github",
+      "technologies": [["fab", "laravel"]]
+    }
+  ]
+}

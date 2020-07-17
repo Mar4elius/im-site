@@ -33,9 +33,8 @@ export default function Sidebar() {
 
   return (
     <div
-      className={`flex min-h-screen bg-pink z-10 ${
-        isFullSideBar ? "side-menu-open" : "side-menu"
-      }`}
+      className={`flex min-h-screen bg-pink z-10
+      ${isFullSideBar ? "side-menu-open" : "side-menu"}`}
     >
       <ul className="w-24 justify-center align-middle">
         <li className="flex justify-center pt-10 pb-5">
