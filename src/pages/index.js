@@ -50,30 +50,43 @@ export default function Home({ location }) {
         </div>
         <div className="flex justify-center">
           <div className="text-2xl">
-            <div className="experience-container">
-              <span className="text-6xl">
-                Years:{" "}
-                <strong className="text-pink pr-5">{difDate.year}</strong>
-              </span>
-              <span className="text-5xl">
-                Months:{" "}
-                <strong className="text-pink pr-5">{difDate.month}</strong>
-              </span>
-              <span className="text-4xl">
-                Days: <strong className="text-pink pr-5">{difDate.day}</strong>
-              </span>
-              <span className="text3xl">
-                Hours:{" "}
-                <strong className="text-pink pr-5">{difDate.hours}</strong>
-              </span>
-              <span className="text-2xl">
-                Minutes:
-                <strong className="text-pink pr-5">{difDate.minutes}</strong>
-              </span>
-              <span className="text-xl">
-                Seconds:
-                <strong className="text-pink">{difDate.seconds}</strong>
-              </span>
+            <div className="experience-container flex items-baseline justify-between">
+              <div className="text-6xl flex">
+                <p className="pr-4">Years:</p>
+                <p className="w-4">
+                  <strong className="text-pink"> {difDate.year}</strong>
+                </p>
+              </div>
+              <div className="text-5xl flex">
+                <p className="pr-4">Months:</p>
+                <p className="w-4">
+                  <strong className="text-pink"> {difDate.month}</strong>
+                </p>
+              </div>
+              <div className="text-4xl flex">
+                <p className="pr-4">Days:</p>
+                <p className="w-4">
+                  <strong className="text-pink"> {difDate.day}</strong>
+                </p>
+              </div>
+              <div className="text3xl flex">
+                <p className="pr-4">Hours:</p>
+                <p className="w-4">
+                  <strong className="text-pink"> {difDate.hours}</strong>
+                </p>
+              </div>
+              <div className="text-2xl flex">
+                <p className="pr-4">Minutes:</p>
+                <p className="w-4">
+                  <strong className="text-pink"> {difDate.minutes}</strong>
+                </p>
+              </div>
+              <p className="text-xl flex">
+                <p className="pr-4">Seconds:</p>
+                <p className="w-4">
+                  <strong className="text-pink"> {difDate.seconds}</strong>
+                </p>
+              </p>
             </div>
           </div>
         </div>
