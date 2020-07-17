@@ -7,32 +7,6 @@ import projectsJson from "../content/projects.json"
 
 export default function MyCode({ location }) {
   const page = location.state?.activePage ?? "my-code"
-  //   const projects = [
-  //     {
-  //       name: "Future Project 1",
-  //       description: "Working on it",
-  //       link: "url",
-  //       gitHub: "github",
-  //       technologies: [["fab", "laravel"], ["fab", "vuejs"], "database"],
-  //       key: getRandomKey(),
-  //     },
-  //     {
-  //       name: "Future Project 2",
-  //       description: "Working on it",
-  //       link: "url",
-  //       gitHub: "github",
-  //       technologies: [["fab", "laravel"], ["fab", "react"], "database"],
-  //       key: getRandomKey(),
-  //     },
-  //     {
-  //       name: "Future Project 3",
-  //       description: "Working on it",
-  //       link: "url",
-  //       gitHub: "github",
-  //       technologies: [["fab", "laravel"]],
-  //       key: getRandomKey(),
-  //     },
-  //   ]
 
   function getRandomKey() {
     return Math.floor(Math.random() * 90000) + 10000
