@@ -20,6 +20,7 @@ module.exports = {
     // service worker plugin
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`,
     {
       //Inclusion of a web app manifest is one of the three generally accepted baseline requirements for a PWA.
       resolve: `gatsby-plugin-manifest`,
@@ -33,6 +34,13 @@ module.exports = {
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
         icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
   ],

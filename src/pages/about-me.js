@@ -5,11 +5,14 @@ import GoogleMaps from "../components/helper-components/google-maps"
 import Button from "../components/form-components/button"
 import Modal from "../components/helper-components/modal"
 import ContactForm from "../components/helper-components/contact-form"
+// Data
+import { graphQl } from "gatsby"
 
-// Font awesome
+// Fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function AboutMe({ location, data }) {
+  console.log(data)
   const page = location.state?.activePage ?? "about-me"
   const [showModal, setShowModal] = useState(false)
 
@@ -73,21 +76,7 @@ export default function AboutMe({ location, data }) {
   return (
     <Layout page={page}>
       <div className="h-64 m-auto w-3/4 flex content-center flex-wrap">
-        <h1>Hello!</h1>
-        <p>Thank you for visiting my personal web site!</p>
-        <p>
-          I’m Igor. If you wondering how do I look like – check top left corner
-          of the screen or visit my Linkedin page. :D Here I should say few
-          words about myself... You could notice, that every page of this
-          website has a header with some of my favourite quotes. I think these
-          quotes describe me as a person (at least that what I think about
-          myself :D).
-        </p>
-        <p>
-          I checked some other designer's personal websites and their websites
-          look much simplier in term of functionality. This is was done in order
-          to have some practise with React and Gatsby{" "}
-        </p>
+        {data.allMarkdownRemark.edges[0].node.rawMarkdownBody}
         <div className="flex justify-center w-full mt-10">
           <Button value="Contact Me" onClick={handleOnClick}></Button>
         </div>
@@ -104,3 +93,15 @@ export default function AboutMe({ location, data }) {
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allMarkdownRemark {
+      edges {
+        node {
+          rawMarkdownBody
+        }
+      }
+    }
+  }
+`
