@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "icon": "envelope-open",
+      "size": "lg",
+      "value": "marauman@gmail.com"
+    },
+    {
+      "icon": "home",
+      "size": "lg",
+      "value": "Edmonton, AB"
+    }
+  ]
+}

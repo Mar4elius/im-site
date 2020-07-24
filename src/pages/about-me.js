@@ -6,39 +6,21 @@ import Button from "../components/form-components/button"
 import Modal from "../components/helper-components/modal"
 import ContactForm from "../components/helper-components/contact-form"
 // Data
-import { graphQl } from "gatsby"
-
+import { graphql } from "gatsby"
+import aboutMe from "../content/aboutMe.json"
 // Fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function AboutMe({ location, data }) {
-  console.log(data)
+  console.log(aboutMe)
   const page = location.state?.activePage ?? "about-me"
   const [showModal, setShowModal] = useState(false)
-
-  const contactIcons = [
-    {
-      icon: "phone",
-      size: "lg",
-      value: "+1 780 312-9282",
-    },
-    {
-      icon: "envelope-open",
-      size: "lg",
-      value: "marauman@gmail.com",
-    },
-    {
-      icon: "home",
-      size: "lg",
-      value: "Edmonton, AB",
-    },
-  ]
 
   const modalHeader = (
     <div className="flex">
       <h1 className="my-8 ml-8 font-bold">Let's Chat!</h1>
-      <ul className="flex justify-between m-8">
-        {contactIcons.map(icon => {
+      <ul className="m-8 flex">
+        {aboutMe.data.map(icon => {
           return (
             <li className="text-dark-blue flex" key={icon.value}>
               <span className="mx-3">
