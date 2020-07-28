@@ -12,7 +12,6 @@ import aboutMe from "../content/aboutMe.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function AboutMe({ location, data }) {
-  console.log(aboutMe)
   const page = location.state?.activePage ?? "about-me"
   const [showModal, setShowModal] = useState(false)
 

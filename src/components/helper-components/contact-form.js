@@ -36,7 +36,6 @@ export default function ContactForm(props) {
       })
       .catch(error => {
         //put data into log
-        console.log(error)
         handleServerResponse(
           false,
           "Hmm, something went wrong. Please try again."

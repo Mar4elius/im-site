@@ -81,12 +81,12 @@ export default function Home({ location }) {
                   <strong className="text-pink"> {difDate.minutes}</strong>
                 </p>
               </div>
-              <p className="text-xl flex">
+              <div className="text-xl flex">
                 <p className="pr-4">Seconds:</p>
                 <p className="w-4">
                   <strong className="text-pink"> {difDate.seconds}</strong>
                 </p>
-              </p>
+              </div>
             </div>
           </div>
         </div>
