@@ -1,25 +1,31 @@
 {
   "projects": [
     {
-      "name": "Project 1",
-      "description": "Working on it",
+      "name": "Movie App",
+      "status": "In Progress",
+      "description": "React app that makes calls to the Movie Data API to get information about the movies and TV shows. Allows you to login using your own MDTB account and update your account from this app, which is pretty neat. :) ",
       "link": "url",
-      "github": "github",
-      "technologies": [["fab", "laravel"], ["fab", "vuejs"], "database"]
+      "github": "https://github.com/Mar4elius/movie-app",
+      "technologies": [["fab", "react"], "server"],
+      "images": ["./movie-app-ss-1.png", "./movie-app-ss-2.png"]
     },
     {
       "name": "Project 2",
-      "description": "Working on it",
+      "status": "Thinking...",
+      "description": "Have an idea? Let me know!!!",
       "link": "url",
       "github": "github",
-      "technologies": [["fab", "laravel"], ["fab", "react"], "database"]
+      "technologies": [["fab", "laravel"], ["fab", "react"], "database"],
+      "images": []
     },
     {
       "name": "Project 3",
-      "description": "Working on it",
+      "status": "Thinking...",
+      "description": "Have an idea? Let me know!!!",
       "link": "url",
       "github": "github",
-      "technologies": [["fab", "laravel"]]
+      "technologies": [["fab", "laravel"]],
+      "images": []
     }
   ]
 }

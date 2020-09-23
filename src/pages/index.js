@@ -87,7 +87,7 @@ export default function Home({ location }) {
       )
     } else {
       return (
-        <div class="w-full flex justify-center">
+        <div className="w-full flex justify-center">
           <FontAwesomeIcon
             icon="spinner"
             size="3x"
