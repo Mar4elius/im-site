@@ -54,8 +54,8 @@ export default function Home({ location }) {
             </p>
           </div>
           <div className="text-5xl flex">
-            <p className="pr-4">Months:</p>
-            <p className="w-4">
+            <p className="pr-">Months:</p>
+            <p className="w-4 ml-6 mr-10">
               <strong className="text-pink"> {difDate.month}</strong>
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function Home({ location }) {
           </div>
           <div className="text3xl flex">
             <p className="pr-4">Hours:</p>
-            <p className="w-4">
+            <p className="w-4 mr-4">
               <strong className="text-pink"> {difDate.hours}</strong>
             </p>
           </div>
