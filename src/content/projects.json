@@ -3,7 +3,7 @@
     {
       "name": "Movie App",
       "status": "In Progress",
-      "description": "React app that makes calls to the Movie Data API to get information about the movies and TV shows. Allows you to login using your own MDTB account and update your account from this app, which is pretty neat. :) ",
+      "description": "React app that makes calls to the The Movie DB API to get information about the movies and TV shows (what a shocker :D). Allows you to login using your own MDTB account and update your account within the app. ",
       "link": "url",
       "github": "https://github.com/Mar4elius/movie-app",
       "technologies": [["fab", "react"], "server"],

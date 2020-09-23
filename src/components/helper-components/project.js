@@ -17,7 +17,7 @@ export default function Project(props) {
   const images = () => {
     if (props.images?.images.length) {
       return (
-        <div className="flex justify-evenly w-full">
+        <div className="flex justify-evenly w-full items-center">
           {props.images.images.map(i => (
             <span
               onClick={() => props.onImageClick(props.project.name)}
@@ -47,7 +47,9 @@ export default function Project(props) {
       </div>
       <div className="bg-white rounded-lg p-6 h-full mx-12 flex flex-wrap">
         {images()}
-        <p className="mt-10">{props.project.description}</p>
+        <div className="flex items-center w-full justify-center">
+          <p className="mt-10">{props.project.description}</p>
+        </div>
 
         <ul className="flex flex-1 items-end">
           {props.project.technologies.map(t => (
