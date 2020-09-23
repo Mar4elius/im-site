@@ -15,7 +15,7 @@ export default function MyCode({ location, data }) {
   const [showModal, setShowModal] = useState(false)
 
   const [activeImages, setActiveImages] = useState(null)
-  const [activeNodeImageId, setActiveNodeImageId] = useState(null)
+  const [activeImage, setActiveImage] = useState(null)
 
   const projectsImages = [
     {
@@ -30,9 +30,11 @@ export default function MyCode({ location, data }) {
 
   function showBigImage(projectName) {
     setActiveImages(projectsImages.find(p => p.appName === projectName))
-    setActiveNodeImageId(
-      projectsImages.find(p => p.appName === projectName)?.images[0].node.id
-    )
+    setActiveImage({
+      idx: 0,
+      imageId: projectsImages.find(p => p.appName === projectName)?.images[0]
+        .node.id,
+    })
     setShowModal(true)
   }
 
@@ -41,15 +43,23 @@ export default function MyCode({ location, data }) {
   }
 
   function showNextImage() {
-    // const lastImageId =
-    //   activeImages.images[activeImages.images.length - 1].node.id
-    //   if (lastImageId !== activeNodeImageId) {
-    //       setActiveNodeImageId()
-    //   }
+    const newIdx = activeImage.idx + 1
+    if (newIdx < activeImages.images.length)
+      setActiveImage({
+        idx: newIdx,
+        imageId: activeImages.images[newIdx].node.id,
+      })
   }
 
   function showPreviousImage() {
-    console.log("previous")
+    const newIdx = activeImage.idx - 1
+    console.log(newIdx)
+    if (newIdx >= 0 && newIdx !== -1) {
+      setActiveImage({
+        idx: newIdx,
+        imageId: activeImages.images[newIdx].node.id,
+      })
+    }
   }
 
   return (
@@ -78,7 +88,7 @@ export default function MyCode({ location, data }) {
             icon="arrow-left"
             size="2x"
             onClick={() => showPreviousImage()}
-            className="hover:text-dark-blue"
+            className="hover:text-dark-blue cursor-pointer mr-5"
           />
           <div className="w-full">
             {activeImages?.images.map(i => {
@@ -87,7 +97,7 @@ export default function MyCode({ location, data }) {
                   fluid={i.node.fluid}
                   key={i.node.id}
                   style={
-                    activeNodeImageId === i.node.id ? { display: "none" } : ""
+                    activeImage.imageId === i.node.id ? { display: "none" } : {}
                   }
                 />
               )
@@ -97,7 +107,7 @@ export default function MyCode({ location, data }) {
             icon="arrow-right"
             size="2x"
             onClick={() => showNextImage()}
-            className="hover:text-dark-blue"
+            className="hover:text-dark-blue cursor-pointer ml-5"
           />
         </div>
       </Modal>
