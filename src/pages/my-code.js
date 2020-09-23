@@ -62,6 +62,12 @@ export default function MyCode({ location, data }) {
     }
   }
 
+  const modalHeader = (
+    <div className="flex">
+      <h1 className="my-8 ml-8 font-bold">{activeImages?.appName}</h1>
+    </div>
+  )
+
   return (
     <Layout page={page}>
       <div className="w-full h-32 flex items-center justify-center"></div>
@@ -79,7 +85,7 @@ export default function MyCode({ location, data }) {
       </div>
       <Modal
         showModal={showModal}
-        header={activeImages?.appName}
+        header={modalHeader}
         content={""}
         onCancelClick={handleCancelClick}
       >
