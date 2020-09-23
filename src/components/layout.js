@@ -16,6 +16,7 @@ import {
   faEnvelopeOpen,
   faPhone,
   faCodeBranch,
+  faServer,
 } from "@fortawesome/free-solid-svg-icons"
 
 import {
@@ -41,6 +42,7 @@ library.add(
   faEnvelopeOpen,
   faPhone,
   faCodeBranch,
+  faServer,
   // brands
   faGithub,
   faLinkedin,

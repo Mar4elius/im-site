@@ -133,7 +133,7 @@ export default function ContactForm(props) {
   const loader = () => {
     if (serverState.submitting) {
       return (
-        <div class="w-full flex justify-center">
+        <div className="w-full flex justify-center">
           <FontAwesomeIcon
             icon="spinner"
             size="3x"
