@@ -12,7 +12,7 @@ export default function GoogleMaps() {
     if (!window.google) {
       let s = document.createElement("script")
       s.type = "text/javascript"
-      s.src = `https://maps.google.com/maps/api/js?key=${process.env.GOOGLE_MAP_API}`
+      s.src = `https://maps.google.com/maps/api/js?key=${process.env.GATSBY_GOOGLE_MAP_API}`
       let x = document.getElementsByTagName("script")[0]
       x.parentNode.insertBefore(s, x)
       s.addEventListener("load", e => {
