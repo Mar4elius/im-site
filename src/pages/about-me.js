@@ -1,6 +1,3 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
 import React, { useState } from "react"
 // Components
 import Layout from "../components/layout"
