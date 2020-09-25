@@ -28,7 +28,7 @@ export default function ContactForm(props) {
     })
     axios({
       method: "POST",
-      url: process.env.GATSBY_FORMSPREE_URL,
+      url: process.env.FORMSPREE_URL,
       data: inputs,
     })
       .then(_ => {
