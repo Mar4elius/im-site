@@ -4,6 +4,9 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+let env = process.env.NODE_ENV || "development"
+require("dotenv").config({ path: `./.env.${env}` })
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
