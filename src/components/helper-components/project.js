@@ -45,7 +45,7 @@ export default function Project(props) {
           <p className="mt-6">Status: {props.project.status}</p>
         </div>
       </div>
-      <div className="bg-white rounded-lg p-6 h-full mx-12 flex flex-wrap">
+      <div className="bg-white rounded-lg p-6 h-full mx-10 flex flex-wrap">
         {images()}
         <div className="flex items-center w-full justify-center">
           <p className="mt-10">{props.project.description}</p>
@@ -59,8 +59,9 @@ export default function Project(props) {
           ))}
         </ul>
 
+        <div className="flex items-end">
         <a
-          className="flex items-end"
+            className="mr-2"
           href={props.project.github}
           target="_blank"
         >
@@ -70,6 +71,17 @@ export default function Project(props) {
             className="text-dark-blue"
           />
         </a>
+        <a
+          href={props.project.link}
+          target="_blank"
+        >
+          <FontAwesomeIcon
+            icon={"link"}
+            size="2x"
+            className="text-dark-blue"
+          />
+        </a>
+        </div>
       </div>
     </div>
   )

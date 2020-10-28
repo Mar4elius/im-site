@@ -17,6 +17,7 @@ import {
   faPhone,
   faCodeBranch,
   faServer,
+  faLink
 } from "@fortawesome/free-solid-svg-icons"
 
 import {
@@ -51,7 +52,8 @@ library.add(
   faReact,
   faVuejs,
   faLaravel,
-  faJs
+  faJs,
+  faLink
 )
 
 export default function Layout({ page, children }) {
