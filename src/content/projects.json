@@ -4,7 +4,7 @@
       "name": "Movie App",
       "status": "In Progress",
       "description": "React app that makes calls to the The Movie DB API to get information about the movies and TV shows (what a shocker :D). Allows you to login using your own MDTB account and update your account within the app. ",
-      "link": "url",
+      "link": "https://movieapp.imarchenko.com",
       "github": "https://github.com/Mar4elius/movie-app",
       "technologies": [["fab", "react"], "server"],
       "images": ["./movie-app-ss-1.png", "./movie-app-ss-2.png"]
