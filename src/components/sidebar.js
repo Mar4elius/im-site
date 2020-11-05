@@ -67,9 +67,9 @@ export default function Sidebar() {
             to={menu.url}
             activeClassName="text-dark-blue"
             state={{ activePage: menu.name }}
+            key={menu.name}
             >
               <li
-              key={menu.name}
               className="cursor-pointer flex justify-center p-6  hover:text-dark-blue"
               >
                 <FontAwesomeIcon icon={menu.icon.icon} size={menu.icon.size} />

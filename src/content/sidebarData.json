@@ -10,7 +10,7 @@
     },
     {
       "name": "My Code",
-      "url": "/my-code",
+      "url": "/my-code/",
       "icon": {
         "icon": "laptop-code",
         "size": "lg"
@@ -18,7 +18,7 @@
     },
     {
       "name": "About Me",
-      "url": "/about-me",
+      "url": "/about-me/",
       "icon": {
         "icon": "address-card",
         "size": "lg"
