@@ -63,21 +63,21 @@ export default function Sidebar() {
         {/* Internal Links */}
         {sidebarJson.sideMenuOptionsInternal.map(menu => {
           return (
-            <li
+            <Link
+            to={menu.url}
+            activeClassName="text-dark-blue"
+            state={{ activePage: menu.name }}
+            >
+              <li
               key={menu.name}
               className="cursor-pointer flex justify-center p-6  hover:text-dark-blue"
-            >
-              <Link
-                to={menu.url}
-                activeClassName="text-dark-blue"
-                state={{ activePage: menu.name }}
               >
                 <FontAwesomeIcon icon={menu.icon.icon} size={menu.icon.size} />
-              </Link>
-              <p className={`${isFullSideBar ? "show-name" : "hide-name"}`}>
-                {menu.name}
-              </p>
-            </li>
+                <p className={`${isFullSideBar ? "show-name" : "hide-name"}`}>
+                  {menu.name}
+                </p>
+              </li>
+            </Link>
           )
         })}
         {/* External Links */}
