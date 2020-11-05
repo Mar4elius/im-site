@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function Home({ location }) {
   // for some reason location.state on initial load of the page is empty
-  const page = location.state?.activePage ?? "home"
+  const page = location.state?.activePage ?? "Home"
   // Experience data
   const startDate = useRef(breakDate(new Date(2018, 10, 15))).current
   const [difDate, setDifDate] = useState(null)

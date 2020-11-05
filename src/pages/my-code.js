@@ -11,7 +11,7 @@ import projectsJson from "../content/projects.json"
 import { graphql } from "gatsby" // to query for image data
 
 export default function MyCode({ location, data }) {
-  const page = location.state?.activePage ?? "my-code"
+  const page = location.state?.activePage ?? "My Code"
   const [showModal, setShowModal] = useState(false)
 
   const [activeImages, setActiveImages] = useState(null)

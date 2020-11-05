@@ -12,7 +12,7 @@ import aboutMe from "../content/aboutMe.json"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function AboutMe({ location, data }) {
-  const page = location.state?.activePage ?? "about-me"
+  const page = location.state?.activePage ?? "About Me"
   const [showModal, setShowModal] = useState(false)
 
   const modalHeader = (
