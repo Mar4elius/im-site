@@ -33,10 +33,10 @@ export default function Sidebar() {
 
   return (
     <div
-      className={`flex min-h-screen bg-pink z-10
-      ${isFullSideBar ? "side-menu-open" : "side-menu"}`}
+      className={`flex min-h-screen bg-pink
+      ${isFullSideBar ? "w-68 transition-all duration-300 ease-linear" : "w-24 transition-all duration-300 ease-linear"}`}
     >
-      <ul className="w-24 justify-center align-middle">
+      <ul className="w-24 align-middle">
         <li className="flex justify-center pt-10 pb-5">
           <img
             src={creatorPhoto}

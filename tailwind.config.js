@@ -8,6 +8,9 @@ module.exports = {
         "custom-red": "#B23850",
         "dark-blue": "#374785",
       },
+      width: {
+          '68': '20rem'
+      }
     },
   },
   variants: {
