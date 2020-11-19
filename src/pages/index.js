@@ -14,7 +14,7 @@ export default function Home({ location }) {
   // for some reason location.state on initial load of the page is empty
   const page = location.state?.activePage ?? "Home"
   // Experience data
-  const startDate = useRef(breakDate(new Date(2018, 10, 15))).current
+  const startDate = useRef(breakDate(new Date(2018, 9, 15))).current
   const [difDate, setDifDate] = useState(null)
 
   useInterval(() => {
@@ -29,13 +29,14 @@ export default function Home({ location }) {
         seconds: startDate.seconds,
       })
     )
+    // console.log(difference);
     setDifDate(difference)
   }, 1000)
 
   function breakDate(date) {
     return {
       year: date.getFullYear(),
-      month: date.getMonth(),
+      month: date.getMonth() + 1,
       day: date.getDate(),
       hours: date.getHours(),
       minutes: date.getMinutes(),
@@ -46,7 +47,7 @@ export default function Home({ location }) {
   const experience = () => {
     if (difDate) {
       return (
-        <div className="text-2xl experience-container flex items-baseline justify-between">
+        <div className="text-2xl flex items-baseline w-full justify-around">
           <div className="text-6xl flex">
             <p className="pr-4">Years:</p>
             <p className="w-4">
@@ -105,7 +106,7 @@ export default function Home({ location }) {
         <div className="flex justify-center w-full">
           <h1 className="text-3xl">Full stack developer for</h1>
         </div>
-        <div className="flex justify-center">{experience()}</div>
+        <div className="flex justify-center w-full justify-between">{experience()}</div>
       </div>
       {/* What I know  */}
       <div className="flex justify-center w-full bg-main flex-grow flex-wrap">
