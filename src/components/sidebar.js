@@ -33,8 +33,8 @@ export default function Sidebar() {
 
   return (
     <div
-      className={`flex min-h-screen bg-pink
-      ${isFullSideBar ? "w-68 transition-all duration-300 ease-linear" : "w-24 transition-all duration-300 ease-linear"}`}
+      className={`hidden sm:flex sm:min-h-screen bg-pink
+      ${isFullSideBar ? "sm:w-68 sm:transition-all sm:duration-300 sm:ease-linear" : "sm:w-24 sm:transition-all sm:duration-300 ease-linear"}`}
     >
       <ul className="w-24 align-middle">
         <li className="flex justify-center pt-10 pb-5">

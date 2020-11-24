@@ -1,5 +1,6 @@
 import React from "react"
 import Sidebar from "../components/sidebar"
+import BottomNavigation from "../components/bottom-navigation"
 import Header from "../components/header"
 
 // Font awesome
@@ -84,6 +85,7 @@ export default function Layout({ page, children }) {
       <div className="flex flex-wrap flex-col w-full">
         <Header quote={quotes[activeQuote]} />
         {children}
+        <BottomNavigation />
       </div>
     </div>
   )
