@@ -82,7 +82,7 @@ export default function Layout({ page, children }) {
   return (
     <div className="flex bg-main">
       <Sidebar />
-      <div className="flex flex-wrap flex-col w-full h-full">
+      <div className="flex flex-wrap flex-col w-full">
         <Header quote={quotes[activeQuote]} />
         {children}
         {/* show bottom nav only on sm screens */}

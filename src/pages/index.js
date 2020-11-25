@@ -106,14 +106,14 @@ export default function Home({ location }) {
   return (
     <Layout page={page}>
       {/* Experience Counter */}
-      <div className="flex justify-center bg-main items-center flex-wrap md:h-64">
-        <div className="flex justify-center w-full">
+      <div className="flex justify-center bg-main items-center flex-wrap flex-grow">
+        <div className="flex w-full justify-center items-center">
           <h1 className="my-5 text-2xl font-bold md:text-3xl md:my-0">Full stack developer for</h1>
         </div>
         <div className="w-full">{experience()}</div>
       </div>
       {/* What I know  */}
-      <div className="flex justify-center w-full bg-main flex-grow flex-wrap">
+      <div className="flex justify-center w-full bg-main flex-wrap flex-grow">
         <div className="flex w-full justify-center items-center">
           <h1 className="my-5 text-2xl font-bold md:text-3xl md:my-0">What I know</h1>
         </div>
