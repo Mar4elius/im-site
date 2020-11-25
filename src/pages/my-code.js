@@ -70,7 +70,7 @@ export default function MyCode({ location, data }) {
 
   return (
     <Layout page={page}>
-      <div className="lg:flex lg:justify-between lg:flex-wrap">
+      <div className="lg:flex lg:justify-between lg:flex-wrap w-full">
         {projectsJson.projects.map(project => {
           return (
             <Project
