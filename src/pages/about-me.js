@@ -56,11 +56,13 @@ export default function AboutMe({ location, data }) {
 
   return (
     <Layout page={page}>
-      <div className="h-64 m-auto w-3/4 flex content-center flex-wrap">
-        {data.allMarkdownRemark.edges[0].node.rawMarkdownBody}
+      <div className="m-auto w-3/4 flex content-center flex-wrap">
+        <div className="w-full my-10">
+            {data.allMarkdownRemark.edges[0].node.rawMarkdownBody}
         <div className="flex justify-center w-full mt-10">
           <Button value="Contact Me" onClick={handleOnClick}></Button>
         </div>
+      </div>
       </div>
       <GoogleMaps />
       <Modal
