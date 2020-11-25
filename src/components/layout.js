@@ -85,6 +85,7 @@ export default function Layout({ page, children }) {
       <div className="flex flex-wrap flex-col w-full">
         <Header quote={quotes[activeQuote]} />
         {children}
+        {/* show bottom nav only on sm screens */}
         <BottomNavigation />
       </div>
     </div>

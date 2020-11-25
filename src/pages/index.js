@@ -47,42 +47,46 @@ export default function Home({ location }) {
   const experience = () => {
     if (difDate) {
       return (
-        <div className="text-2xl sm:text-2xl w-full sm:flex sm:items-baseline sm:justify-around">
-          <div className="grid grid-cols-2 gap-4 mx-3 text-4xl mb-5 sm:flex sm:text-6xl sm:my-0">
-            <p className="flex justify-end sm:pr-4">Years:</p>
-            <div className="flex justify-center sm:w-4">
-              <strong className="text-pink"> {difDate.year}</strong>
+        <div className="text-2xl md:text-2xl">
+            <div className="md:flex md:items-baseline md:justify-around lg:w-full">
+                <div className="grid grid-cols-2 gap-4 mx-3 text-2xl mb-5 md:flex md:justify-end md:text-3xl md:my-0 lg:text-5xl lg:w-1/3 lg:justify-center">
+                    <p className="flex justify-end">Years:</p>
+                    <p className="flex justify-center md:w-4">
+                        <strong className="text-pink"> {difDate.year}</strong>
+                    </p>
+                </div>
+                <div className="grid grid-cols-2 gap-4 mx-3 text-2xl my-5 md:flex md:text-3xl md:my-0 lg:text-5xl lg:w-1/3 lg:justify-center">
+                    <p className="flex justify-end">Months:</p>
+                    <p className="flex justify-center md:w-4 md:ml-6 md:mr-10">
+                    <strong className="text-pink"> {difDate.month}</strong>
+                    </p>
+                </div>
+                <div className="grid grid-cols-2 gap-4 mx-3 text-2xl my-5 md:flex md:my-0 md:text-3xl lg:text-5xl lg:w-1/3 lg:justify-center">
+                    <p className="flex justify-end">Days:</p>
+                    <p className="flex justify-center md:w-4">
+                    <strong className="text-pink"> {difDate.day}</strong>
+                    </p>
+                </div>
+          </div>
+          <div className="md:flex md:items-baseline md:justify-around lg:w-full">
+            <div className="grid grid-cols-2 gap-4 mx-3 text-xl my-5 md:flex md:my-0 md:text-2xl lg:text-3xl lg:w-1/3 lg:justify-center">
+                <p className="flex justify-end md:pr-4">Hours:</p>
+                <p className="flex justify-center md:w-4 md:mr-4">
+                <strong className="text-pink"> {difDate.hours}</strong>
+                </p>
             </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4 mx-3 text-3xl my-5 sm:flex sm:text-5xl sm:my-0">
-            <p className="flex justify-end sm:pr-4">Months:</p>
-            <p className="flex justify-center sm:w-4 sm:ml-6 sm:mr-10">
-              <strong className="text-pink"> {difDate.month}</strong>
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4 mx-3 text-2xl my-5 flex sm:my-0">
-            <p className="flex justify-end sm:pr-4">Days:</p>
-            <p className="flex justify-center sm:w-4">
-              <strong className="text-pink"> {difDate.day}</strong>
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4 mx-3 text-xl my-5 sm:text-3xl flex sm:my-0">
-            <p className="flex justify-end sm:pr-4">Hours:</p>
-            <p className="flex justify-center sm:w-4 sm:mr-4">
-              <strong className="text-pink"> {difDate.hours}</strong>
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4 mx-3 text-lg my-5 flex sm:text-2xl sm:my-0">
-            <p className="flex justify-end sm:pr-4">Minutes:</p>
-            <p className="flex justify-center sm:w-4">
-              <strong className="text-pink"> {difDate.minutes}</strong>
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4 mx-3 text-md flex sm:text-xl sm:my-0">
-            <p className="flex justify-end sm:pr-4">Seconds:</p>
-            <p className="flex justify-center sm:w-4">
-              <strong className="text-pink"> {difDate.seconds}</strong>
-            </p>
+            <div className="grid grid-cols-2 gap-4 mx-3 text-lg my-5 md:flex  md:my-0 md:text-2xl lg:text-3xl lg:w-1/3 lg:justify-center">
+                <p className="flex justify-end md:pr-4">Minutes:</p>
+                <p className="flex justify-center md:w-4">
+                <strong className="text-pink"> {difDate.minutes}</strong>
+                </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4 mx-3 text-md md:flex md:my-0 md:text-2xl lg:text-3xl lg:w-1/3 lg:justify-center">
+                <p className="flex justify-end md:pr-4">Seconds:</p>
+                <p className="flex justify-center md:w-4">
+                <strong className="text-pink"> {difDate.seconds}</strong>
+                </p>
+            </div>
           </div>
         </div>
       )
@@ -102,18 +106,18 @@ export default function Home({ location }) {
   return (
     <Layout page={page}>
       {/* Experience Counter */}
-      <div className="flex justify-center bg-main items-center flex-wrap sm:h-64">
+      <div className="flex justify-center bg-main items-center flex-wrap md:h-64">
         <div className="flex justify-center w-full">
-          <h1 className="my-5 text-2xl font-bold sm:text-3xl sm:my-0">Full stack developer for</h1>
+          <h1 className="my-5 text-2xl font-bold md:text-3xl md:my-0">Full stack developer for</h1>
         </div>
         <div className="w-full">{experience()}</div>
       </div>
       {/* What I know  */}
       <div className="flex justify-center w-full bg-main flex-grow flex-wrap">
         <div className="flex w-full justify-center items-center">
-          <h1 className="my-5 text-2xl font-bold sm:text-3xl sm:my-0">What I know</h1>
+          <h1 className="my-5 text-2xl font-bold md:text-3xl md:my-0">What I know</h1>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
           <Technologies title="Languages">{skillsJson.languages}</Technologies>
           <Technologies title="Frameworks">
             {skillsJson.frameworks}

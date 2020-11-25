@@ -53,7 +53,7 @@ export default function Sidebar() {
         </li>
         <li
           onClick={handleArrowClick}
-          className="cursor-pointer flex justify-center p-6 text-white hover:text-dark-blue"
+          className="hidden lg:visible lg:cursor-pointer lg:flex lg:justify-center lg:p-6 lg:text-white hover:text-dark-blue"
         >
           <FontAwesomeIcon
             icon={isFullSideBar ? "arrow-left" : "arrow-right"}

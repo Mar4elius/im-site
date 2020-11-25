@@ -9,7 +9,7 @@ import sidebarJson from "../content/sidebarData.json"
 export default function Sidebar() {
   return (
     <div
-      className="visible sm:hidden sm:flex sm:min-h-screen bg-pink">
+      className="visible fixed bottom-0 w-full sm:hidden sm:flex sm:min-h-screen bg-pink">
       <ul className="w-full flex justify-between">
         {/* Internal Links */}
         {sidebarJson.sideMenuOptionsInternal.map(menu => {
