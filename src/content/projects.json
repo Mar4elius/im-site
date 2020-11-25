@@ -13,7 +13,7 @@
       "name": "Project 2",
       "status": "Thinking...",
       "description": "Have an idea? Let me know!!!",
-      "link": "url",
+      "link": null,
       "github": "github",
       "technologies": [["fab", "laravel"], ["fab", "react"], "database"],
       "images": []
@@ -22,7 +22,7 @@
       "name": "Project 3",
       "status": "Thinking...",
       "description": "Have an idea? Let me know!!!",
-      "link": "url",
+      "link": null,
       "github": "github",
       "technologies": [["fab", "laravel"]],
       "images": []
