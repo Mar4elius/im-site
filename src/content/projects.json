@@ -12,7 +12,7 @@
     {
       "name": "Bundles Web App",
       "status": "In Progress",
-      "description": "Laravel/Vue.js that will allow users to create their account and purchase products (bundles). I am planing to create cart functionality that will use Stripe for getting payments. Another neat functionality that I want to add is - Admin side, where users who are admins can manage inventory. I have started working on it, however it will take time to finish. Please check Github repo to see some code! ",
+      "description": "Laravel/Vue.js app that will allow users to create their account and purchase products (bundles). I am planing to create cart functionality that will use Stripe for getting payments. Another neat functionality that I want to add is - Admin side, where users who are admins can manage inventory. I have started working on it, however it will take time to finish. Please check Github repo to see some code! ",
       "link": null,
       "github": "https://github.com/Mar4elius/bundles-web-app",
       "technologies": [["fab", "laravel"], ["fab", "vuejs"], ["fab", "docker"], "database"],

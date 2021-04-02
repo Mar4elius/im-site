@@ -16,13 +16,19 @@ export default function MyCode({ location, data }) {
 
   const [activeImages, setActiveImages] = useState(null)
   const [activeImage, setActiveImage] = useState(null)
-
+  console.log(data)
   const projectsImages = [
     {
       appName: "Movie App",
       images: data.movieAppImages.edges,
     },
+    {
+      appName: "Bundles Web App",
+      images: data.bundlesAppImages.edges,
+    },
   ]
+
+  console.log(projectsImages.images)
 
   function getRandomKey() {
     return Math.floor(Math.random() * 90000) + 10000
@@ -124,6 +130,24 @@ export const pageQuery = graphql`
   query MovieAppImageQuery {
     movieAppImages: allImageSharp(
       filter: { fluid: { src: { regex: "/movie-app/" } } }
+    ) {
+      edges {
+        node {
+          id
+          fluid(maxWidth: 1240) {
+            src
+            srcSet
+            base64
+            aspectRatio
+            originalImg
+            sizes
+          }
+        }
+      }
+    }
+
+    bundlesAppImages: allImageSharp(
+      filter: { fluid: { src: { regex: "/bundles-web-app/" } } }
     ) {
       edges {
         node {
