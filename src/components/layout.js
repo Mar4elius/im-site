@@ -18,7 +18,7 @@ import {
   faPhone,
   faCodeBranch,
   faServer,
-  faLink
+  faLink,
 } from "@fortawesome/free-solid-svg-icons"
 
 import {
@@ -30,6 +30,7 @@ import {
   faVuejs,
   faLaravel,
   faJs,
+  faDocker,
 } from "@fortawesome/free-brands-svg-icons"
 
 library.add(
@@ -54,7 +55,8 @@ library.add(
   faVuejs,
   faLaravel,
   faJs,
-  faLink
+  faLink,
+  faDocker
 )
 
 export default function Layout({ page, children }) {
@@ -62,20 +64,24 @@ export default function Layout({ page, children }) {
   const quotes = {
     home: "The path will be overcome by the person walking it.",
     myCode: "Talk is cheap. Show me the code.",
-    aboutMe: "I'm a great believer in luck, and I find the harder I work, the more I have of it.",
+    aboutMe:
+      "I'm a great believer in luck, and I find the harder I work, the more I have of it.",
   }
   // some page name come like 2 words
-  const activePage = page.split(" ");
-  let activeQuote = null;
+  const activePage = page.split(" ")
+  let activeQuote = null
   // find object key and lowercase first char of activePage
   if (activePage.length > 1) {
-    const camelName = activePage[0].charAt(0).toLowerCase() + activePage[0].slice(1) + activePage[1].charAt(0).toUpperCase() + activePage[1].slice(1);
-    activeQuote = Object.keys(quotes).find(
-        name => name === camelName
-    )
+    const camelName =
+      activePage[0].charAt(0).toLowerCase() +
+      activePage[0].slice(1) +
+      activePage[1].charAt(0).toUpperCase() +
+      activePage[1].slice(1)
+    activeQuote = Object.keys(quotes).find(name => name === camelName)
   } else {
     activeQuote = Object.keys(quotes).find(
-        name => name === activePage[0].charAt(0).toLowerCase() + activePage[0].slice(1)
+      name =>
+        name === activePage[0].charAt(0).toLowerCase() + activePage[0].slice(1)
     )
   }
 
