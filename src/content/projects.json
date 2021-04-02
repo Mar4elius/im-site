@@ -16,7 +16,7 @@
       "link": null,
       "github": "github",
       "technologies": [["fab", "laravel"], ["fab", "vuejs"], "database"],
-      "images": ["./bundles-web-app-ss-1.png"]
+      "images": ["./bundles-web-app-ss-1.png", "./bundles-web-app-ss-2.png"]
     },
     {
       "name": "Project 3",
