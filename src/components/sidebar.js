@@ -34,7 +34,11 @@ export default function Sidebar() {
   return (
     <div
       className={`hidden sm:flex sm:min-h-screen bg-pink
-      ${isFullSideBar ? "sm:w-68 sm:transition-all sm:duration-300 sm:ease-linear" : "sm:w-24 sm:transition-all sm:duration-300 ease-linear"}`}
+      ${
+        isFullSideBar
+          ? "sm:w-68 sm:transition-all sm:duration-300 sm:ease-linear"
+          : "sm:w-24 sm:transition-all sm:duration-300 ease-linear"
+      }`}
     >
       <ul className="w-24 align-middle">
         <li className="flex justify-center pt-10 pb-5">
@@ -64,14 +68,12 @@ export default function Sidebar() {
         {sidebarJson.sideMenuOptionsInternal.map(menu => {
           return (
             <Link
-            to={menu.url}
-            activeClassName="text-dark-blue"
-            state={{ activePage: menu.name }}
-            key={menu.name}
+              to={menu.url}
+              activeClassName="text-dark-blue"
+              state={{ activePage: menu.name }}
+              key={menu.name}
             >
-              <li
-              className="cursor-pointer flex justify-center p-6  hover:text-dark-blue"
-              >
+              <li className="cursor-pointer flex justify-center p-6  hover:text-dark-blue">
                 <FontAwesomeIcon icon={menu.icon.icon} size={menu.icon.size} />
                 <p className={`${isFullSideBar ? "show-name" : "hide-name"}`}>
                   {menu.name}

@@ -10,13 +10,13 @@
       "images": ["./movie-app-ss-1.png", "./movie-app-ss-2.png"]
     },
     {
-      "name": "Project 2",
-      "status": "Thinking...",
-      "description": "Have an idea? Let me know!!!",
+      "name": "Bundles Web App",
+      "status": "In Progress",
+      "description": "Laravel/Vue.js that will allow users to create their account and purchase products (bundles). I am planing to create cart functionality that will use Stripe for getting payments. Another neat functionality that I want to add is - Admin side, where users who are admins can manage inventory. I have started working on it, however it will take time to finish. Please check Github repo to see some code! ",
       "link": null,
       "github": "github",
-      "technologies": [["fab", "laravel"], ["fab", "react"], "database"],
-      "images": []
+      "technologies": [["fab", "laravel"], ["fab", "vuejs"], "database"],
+      "images": ["./bundles-web-app-ss-1.png"]
     },
     {
       "name": "Project 3",
